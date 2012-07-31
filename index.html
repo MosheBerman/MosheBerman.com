@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Moshe Berman
+	</title>
+	
+	<style>
+		@import "style.css";
+	</style>
+	
+	<!-- jQuery first, then alphabetical -->
+	
+	<script type="text/javascript" src="jquery172.js"></script>
+	
+	<script type="text/javascript" src="center.js"></script>	
+	<script type="text/javascript" src="feed.js"></script>
+	<script type="text/javascript" src="redirect.js"></script>	
+	<script type="text/javascript" src="photo.js"></script>
+	<script type="text/javascript" src="banners.js"></script>	
+	
+	<script type="text/javascript">
+		$(document).ready(
+		function(){
+			centerVertically();		
+			redirectIfReferrerIsBlogLink();
+			loadPhoto("https://secure.gravatar.com/avatar/57f5ee2e1627b45e923de962ab0b0eab");
+			loadFeedFromURL("http://blog.mosheberman.com/feed/");
+			loadGitReposFromURL("https://api.github.com/users/mosheberman/repos?callback=?");
+			configureBannerSelect();
+			loadBanners();
+			scrollBanner();
+		});
+	</script>
+</head>
+<body>
+	<div id="outerWrapper">
+	
+		<!-- The main banner -->
+		<div id="bannerWrapper">
+			<div id="innerBanner">
+				<!-- TODO: Change the links to point to a template. -->
+				<div class="banner">
+					<a href="http://itunes.com/apps/mosheberman/zmanim" class="bannerLink">
+					<img class="bannerImage" src="./images/zmanim.png"/>
+						Zmanim
+					</a>
+				</div>			
+				<div class="banner">
+					<a href="http://itunes.com/apps/mosheberman/sefira" class="bannerLink">
+					<img class="bannerImage" src="./images/ultimateomer.png" />					
+						Ultimate Omer 2
+					</a>
+				</div>	
+				<div class="banner">
+					<a href="http://itunes.com/apps/mosheberman/nippon" class="bannerLink">
+					<img class="bannerImage" src="./images/nippon.png" />										
+						Nippon
+					</a>
+				</div>			
+			</div>
+		</div>
+		
+		<div id="bannerControls">
+			<div id="buttonWrapper">
+				<span class="dot .selectedDot" id="first"></span>			
+				<span class="dot" id="middle"></span>			
+				<span class="dot" id="last"></span>									
+			</div>
+		</div>
+		
+		<!-- Center Columns -->
+		<div id="columnsWrapper">
+			<div class="navbar">
+				About
+			</div>		
+			<div class="navbar middle">
+				Blog
+			</div>	
+			<div class="navbar">
+				Code
+			</div>									
+			<div class="column" id="bioColumn">
+				<img id="photo" src="./images/icon.png" />
+				<p>Moshe Berman is a student at Brooklyn College. </p>
+			</div>
+			<div class="column" id="feedColumn">
+				<!-- Pull blog RSS feed here -->		
+				<span class="loading" id="loadingFeed">Loading...</span>
+				<ul id="feedList" class="tableView">
+				
+				</ul>
+			</div>
+			<div class="column" id="gitColumn">
+				<!-- GitHub links to go here -->		
+				<span class="loading" id="loadingGit">Loading...</span>			
+				<ul id="repoList" class="tableView">
+				
+				</ul>
+			</div>
+		</div>
+		
+		<!-- Footer -->
+		<div id="footer" class="tabbar">
+			
+		</div>	
+	</div>
+</body>
+</html>
