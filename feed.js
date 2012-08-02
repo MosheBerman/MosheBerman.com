@@ -47,6 +47,9 @@ function loadGitReposFromURL(url){
 	showLoadingIndicator("#loadingGit");
 
 	$.getJSON(url, null ,function(data){
+	
+		data = data.data;
+		
 		var size = data.length;
 		
 		$.each(data, function(){
