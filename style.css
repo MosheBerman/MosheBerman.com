@@ -136,15 +136,41 @@
 		/* The bio section */
 	
 		#bioColumn{
+			background-color: #c4ccd5;
+			background-image: linear-gradient(90deg, #cad2d8 50%, #c4ccd5 50%);
+			background-image: -webkit-linear-gradient(left, #cad2d8 50%, #c4ccd5 50%);			
+			background-size: 10px;		
+		}
 			
+		/* Height should match the dimensions of the photo */
+		
+		#bioColumn .singleGroupCell{
+			border-radius: 8px;
+			background-color: #fff;
+			border: 1px solid #000;
+			margin: 10px;
+			height: 72px;
+			padding: 0;
+			font-weight: 100;
+			color: gray;
+			font-size: 12px;
+		}
+		
+		.singleGroupCell p{
+			padding: 2px;
+			margin: 0;
 		}
 				
-		#photo{
+		.singleGroupCell .photo{
 			display: block;
-			margin: 10px auto;
+			float: left;
+			margin: 0;
 			height: 72px;
 			width: 72px;
-			border-radius: 12px;
+			border-top-left-radius: 8px;
+			border-bottom-left-radius: 8px;			
+			padding: 0;
+			padding-right: 5px;
 		}
 	
 		
