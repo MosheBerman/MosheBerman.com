@@ -8,7 +8,10 @@ function center(){
 	var content = $('#outerWrapper');
 	
 	content.css('position', 'relative');
-	content.css('top', ($(window).height()-content.height())/2 + "px");
+	
+	var center = ($(window).height()-content.height())/2;
+	
+	content.animate({'margin-top' : center}, 300, null);
 }
 		
 //

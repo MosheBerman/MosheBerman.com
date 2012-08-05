@@ -19,7 +19,7 @@
 			margin-top: 10px;
 			padding: 0;
 			box-shadow: 0px 0px 5px #555;
-			height: 640px;
+			height: 293px;
 			border-radius: 3px;
 			overflow: hidden;
 		}
@@ -113,7 +113,7 @@
 		.column{
 			width: 320px;
 			float: left;
-			height: 347px;
+			height: 0px;
 			overflow: auto;
 			padding: 0;
 			background-color: #c4ccd5;
@@ -131,17 +131,11 @@
 		}
 
 		
-		.column p{
-			text-align: left;
-			padding: 0 5px;
-			line-height: 1.4em;	/* Change this when we get a nice font */
-		}		
-		
 		/* The bio section */
 			
 		/* Height should match the dimensions of the photo */
 		
-		#bioColumn .singleGroupCell{
+		#appColumn .singleGroupCell{
 			border-radius: 8px;
 			background-color: #fff;
 			border: 1px solid #000;
@@ -208,12 +202,34 @@
 			float: left;
 			width: 314px;
 			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;			
+			overflow: hidden;		
 			text-decoration: none;
-			padding-left: 5px;
 			font-weight: bold;			
 			color: black;
+		}
+		
+		.tableView .row a .label{
+			padding-left: 5px;
+			overflow: hidden;
+			text-overflow: ellipsis;				
+		}		
+		
+		.tableView .row img{
+			height: 40px;
+			width: 40px;
+			float: left;
+			margin: 2px;
+			padding: 0;
+			border-radius: 6px;
+			box-shadow: 0px 0 2px #aaa;
+		}
+		
+		.tableView .dark{
+			background-color: #bebebe;
+		}
+		
+		.tableView .light{
+			background-color: #dedede;
 		}
 		
 		/* The footer */
@@ -221,11 +237,14 @@
 		#footer{
 			display: block;
 			height: 49px;
+			line-height: 49px;
+			vertical-align: middle;
 			width: 960px;
 			float: left;
 			border-bottom-left-radius: 3px;
 			border-bottom-right-radius: 3px;			
 			text-align: center;
+			border-top: 1px solid #000;
 		}
 		
 		#footer #photo{
@@ -233,17 +252,15 @@
 			width: 40px;
 			height: 40px;
 			float: left;
-			margin: 4px;
+			margin: 2px 3px;
 			overflow: hidden;
 			border-radius: 3px;
 		}
 		
 		#footer p{
-			vertical-align: middle;
+			margin: 0;
 			font-weight:100;
 			font-size: 14px;
-			height: inherit;
-			line-height: 44px;
 		}
 		
 		/* Bars */
@@ -257,6 +274,7 @@
 			line-height: 44px;
 			text-shadow: 0 -1px 1px #7c899b;
 			font-weight: normal;
+			border-bottom: 1px solid #222;
 			
 			background: #afbbce; /* Old browsers */
 			/* IE9 SVG, needs conditional override of 'filter' to 'none' */

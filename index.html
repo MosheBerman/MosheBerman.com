@@ -22,15 +22,17 @@
 	<script type="text/javascript">
 		$(document).ready(
 		function(){
-			centerVertically();		
+// 			centerVertically();		
 			redirectIfReferrerIsBlogLink();
 			loadPhoto("https://secure.gravatar.com/avatar/57f5ee2e1627b45e923de962ab0b0eab");
 			loadAppsFromURL("http://yetanotheriphoneapp.com/?json=''");
 			loadFeedFromURL("http://blog.mosheberman.com/feed/");
 			loadGitReposFromURL("https://api.github.com/users/mosheberman/repos?callback=?");
+			expandColumns();
 			configureBannerSelect();
 			loadBanners();
 			scrollBanner();
+			
 		});
 	</script>
 </head>
@@ -105,7 +107,7 @@
 		
 		<!-- Footer -->
 		<div id="footer" class="tabbar">
-				<div class="singleGroupCell"><img class="photo" id="photo" src="./images/icon.png" /><p>Moshe Berman is a student at Brooklyn College. He writes apps for iPhone, iPad, and iPod touch.</p></div>			
+			<img class="photo" id="photo" src="./images/icon.png" /><p>Moshe Berman is a student at Brooklyn College. He writes apps for iPhone, iPad, and iPod touch.</p>
 		</div>	
 	</div>
 </body>

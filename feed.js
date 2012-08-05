@@ -109,6 +109,7 @@ function loadGitReposFromURL(url){
 function addItemToList(item, list){
 	var title;
 	var link;
+	var image;
 	
 	//	If the item has a title property
 	if(item["title"]){
@@ -121,7 +122,7 @@ function addItemToList(item, list){
 		title = item["name"].trim();
 	}
 	
-	if(title == "Bitachon.org" || title == "Nippon"){
+	if(title == "Bitachon.org" || (title == "Nippon" && list == "#repoList")){
 	 	return;
 	}
 	
@@ -136,8 +137,17 @@ function addItemToList(item, list){
 	//
 	//	Add a link to the list of links
 	//
+
+	if(item['image']){
+		image = item['image'];
+	}
 	
-	$(list).append('<li class="row"><a href="'+link+'">' + title + '</a></li>');
+	if(list == "#appList"){
+		$(list).append('<li class="row"><a href="'+link+'"><img class="icon" src="http://apps.mosheberman.com/images/'+image+'" /><span class="label">' + title + '</span></a></li>');
+	}else{
+		$(list).append('<li class="row"><a href="'+link+'"><span class="label">' + title + '</span></a></li>');
+	}
+	
 }
 
 //
@@ -155,9 +165,20 @@ function removeLoadingIndicator(indicator){
 }
 
 //
-//
+//	Display a given loading indicator
 //
 
 function showLoadingIndicator(indicator){
 	$(indicator).css("display", "block");
+}
+
+//
+//	Expand the height of the views as necessary, to show the columns
+//
+//	Values used here are magic numbers.
+//
+
+function expandColumns(){
+	$(".column").animate({'height': '347px'}, 300);
+	$("#outerWrapper").animate({'height':'640px'},300, function(){center();});
 }
