@@ -158,7 +158,7 @@
 			margin: 0;
 		}
 				
-		.singleGroupCell .photo{
+		.singleGroupCell.photo{
 			display: block;
 			float: left;
 			margin: 0;
@@ -221,13 +221,29 @@
 		#footer{
 			display: block;
 			height: 49px;
-			vertical-align: middle;
-			line-height: 49px;
-			font-weight:100;
 			width: 960px;
 			float: left;
 			border-bottom-left-radius: 3px;
 			border-bottom-right-radius: 3px;			
+			text-align: center;
+		}
+		
+		#footer #photo{
+			display: block;
+			width: 40px;
+			height: 40px;
+			float: left;
+			margin: 4px;
+			overflow: hidden;
+			border-radius: 3px;
+		}
+		
+		#footer p{
+			vertical-align: middle;
+			font-weight:100;
+			font-size: 14px;
+			height: inherit;
+			line-height: 44px;
 		}
 		
 		/* Bars */

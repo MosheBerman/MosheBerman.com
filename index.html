@@ -25,6 +25,7 @@
 			centerVertically();		
 			redirectIfReferrerIsBlogLink();
 			loadPhoto("https://secure.gravatar.com/avatar/57f5ee2e1627b45e923de962ab0b0eab");
+			loadAppsFromURL("http://yetanotheriphoneapp.com/?json=''");
 			loadFeedFromURL("http://blog.mosheberman.com/feed/");
 			loadGitReposFromURL("https://api.github.com/users/mosheberman/repos?callback=?");
 			configureBannerSelect();
@@ -80,8 +81,11 @@
 			<div class="navbar">
 				<a href="http://github.com/MosheBerman">Code</a>
 			</div>									
-			<div class="column" id="bioColumn">
-				<div class="singleGroupCell"><img class="photo" id="photo" src="./images/icon.png" /><p>Moshe Berman is a student at Brooklyn College. He writes apps for iPhone, iPad, and iPod touch. In his spare time... wait, spare what?</p></div>
+			<div class="column" id="appColumn">
+				<span class="loading" id="loadingApps">Loading...</span>			
+				<ul id="appList" class="tableView">
+				
+				</ul>				
 			</div>
 			<div class="column" id="feedColumn">
 				<!-- Pull blog RSS feed here -->		
@@ -101,7 +105,7 @@
 		
 		<!-- Footer -->
 		<div id="footer" class="tabbar">
-			
+				<div class="singleGroupCell"><img class="photo" id="photo" src="./images/icon.png" /><p>Moshe Berman is a student at Brooklyn College. He writes apps for iPhone, iPad, and iPod touch.</p></div>			
 		</div>	
 	</div>
 </body>

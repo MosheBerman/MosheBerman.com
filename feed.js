@@ -1,4 +1,35 @@
 //
+//
+//
+
+function loadAppsFromURL(url){
+
+	showLoadingIndicator("#loadingApps");
+
+	$.get(url, null ,function(data){
+				
+		data = $.parseJSON(data);
+		
+		var size = data.length;
+		
+		$.each(data, function(){
+		
+			var item = $(this)[0];
+			
+ 	       	addItemToList(item, "#appList");
+			console.log(item);
+	       	
+		});
+		
+		removeLoadingIndicator("#loadingApps"); 	 			
+		
+		
+		console.log(data);
+	});
+	
+}
+
+//
 //	Load the blog feed and parse it into the list view
 //
 
@@ -55,8 +86,6 @@ function loadGitReposFromURL(url){
 		$.each(data, function(){
 		
 			var item = $(this)[0];
-			
-			console.log(item);
 			
 	       	addItemToList(item, "#repoList");
 	       	
