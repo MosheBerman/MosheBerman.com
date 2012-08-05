@@ -15,6 +15,13 @@ function loadAppsFromURL(url){
 		$.each(data, function(){
 		
 			var item = $(this)[0];
+		
+			/* Set up the properties */	
+			
+			item.title = item.app_name;
+			item.link = item.app_link;
+			description = item.app_description;
+			item.image = item.app_image_link;
 			
  	       	addItemToList(item, "#appList");
 			console.log(item);
