@@ -22,7 +22,8 @@
 	<script type="text/javascript">
 		$(document).ready(
 		function(){
-// 			centerVertically();		
+				
+ 			centerVertically();		
 			redirectIfReferrerIsBlogLink();
 			loadPhoto("https://secure.gravatar.com/avatar/57f5ee2e1627b45e923de962ab0b0eab");
 			loadAppsFromURL("http://yetanotheriphoneapp.com/?json=''");
@@ -31,6 +32,10 @@
 			expandColumns();
 			configureBannerSelect();
 			loadBanners();
+			
+			$('.dot').eq(0).addClass('selectedDot');
+			$('#bannerControls').css('display', 'block');			
+
 			scrollBanner();
 			
 		});
@@ -44,21 +49,18 @@
 			<div id="innerBanner">
 				<!-- TODO: Change the links to point to a template. -->
 				<div class="banner">
+					<a href="http://itunes.com/apps/mosheberman/sefira" class="bannerLink">
+						<img class="bannerImage" src="./images/ultimateomer@2x.png" height="200px" width="960px" alt="Ultimate Omer 2" />
+					</a>
+				</div>
+				<div class="banner">
 					<a href="http://itunes.com/apps/mosheberman/zmanim" class="bannerLink">
-					<img class="bannerImage" src="./images/zmanim@2x.png"/>
-						Zmanim
+					<img class="bannerImage" src="./images/zmanim@2x.png" height="200px" width="960px" alt="Zmanim for iPhone" />
 					</a>
 				</div>			
 				<div class="banner">
-					<a href="http://itunes.com/apps/mosheberman/sefira" class="bannerLink">
-					<img class="bannerImage" src="./images/ultimateomer@2x.png" />					
-						Ultimate Omer 2
-					</a>
-				</div>	
-				<div class="banner">
 					<a href="http://itunes.com/apps/mosheberman/nippon" class="bannerLink">
-					<img class="bannerImage" src="./images/nippon@2x.png" />										
-						Nippon
+					<img class="bannerImage" src="./images/nippon@2x.png" height="200px" width="960px" alt="Nippon" />							
 					</a>
 				</div>			
 			</div>
@@ -107,7 +109,7 @@
 		
 		<!-- Footer -->
 		<div id="footer" class="tabbar">
-			<img class="photo" id="photo" src="./images/icon.png" /><p>Moshe Berman is a student at Brooklyn College. He writes apps for iPhone, iPad, and iPod touch.</p>
+			<img class="photo" id="photo" src="https://secure.gravatar.com/avatar/57f5ee2e1627b45e923de962ab0b0eab" /><p>Moshe Berman is a student at Brooklyn College. He writes apps for iPhone, iPad, and iPod touch.</p>
 		</div>	
 	</div>
 </body>

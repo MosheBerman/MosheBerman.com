@@ -84,7 +84,7 @@ function scrollBanner(){
 
 function  scrollToIndex(index){
 
-var banner = $("#innerBanner");
+		var banner = $("#innerBanner");
 		var wrapper = $("#bannerWrapper");
 		
 		var left = parseInt(banner.css("margin-left"));

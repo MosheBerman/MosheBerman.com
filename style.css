@@ -64,7 +64,7 @@
 		}
 		
 		#bannerControls{
-			display: block;
+			display: none;
 			float: left;
 			height: 25px;
 			margin-top:-25px;
