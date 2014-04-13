@@ -1,0 +1,20 @@
+{
+	"banners" :
+	[
+		{
+			"url" : "http://itunes.com/apps/sefira",
+			"image_url" : "http://mosheberman.com/images/ultimateomer.png",
+			"title" : "Ultimate Omer"
+		},
+		{
+			"url" : "http://itunes.com/apps/zmanim",
+			"image_url" : "http://mosheberman.com/images/zmanim.png",
+			"title" : "Zmanim"
+		},
+		{
+			"url" : "",
+			"image_url" : "",
+			"title" : ""
+		}
+	] 	
+}
