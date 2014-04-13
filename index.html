@@ -5,7 +5,7 @@
 		Moshe Berman
 	</title>
 
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	
 	<style>
 		@import "style.css";
@@ -48,6 +48,20 @@
 			
 		});
 	</script>
+
+	<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-2671320-1', 'auto');  // Replace with your property ID.
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+
+</script>
+
 </head>
 <body>
 	<div id="outerWrapper">
@@ -56,6 +70,11 @@
 		<div id="bannerWrapper">
 			<div id="innerBanner">
 				<!-- TODO: Change the links to point to a template. -->
+				<div class="banner">
+					<a href="http://gabbai.mosheberman.com" class="bannerLink">
+						<img class="bannerImage" src="http://mosheberman.com/images/gabbai@2x.png" height="200" width="960" alt="Gabbai. A new kind of digital zmanim clock." />
+					</a>
+				</div>				
 				<div class="banner">
 					<a href="http://itunes.com/apps/mosheberman/sefira" class="bannerLink">
 						<img class="bannerImage" src="http://mosheberman.com/images/ultimateomer@2x.png" height="200" width="960" alt="Ultimate Omer 2" />
@@ -77,7 +96,7 @@
 		<div id="bannerControls">
 			<div id="buttonWrapper">
 				<span class="dot .selectedDot" id="first"></span>			
-				<span class="dot" id="middle"></span>			
+				<span class="dot middle"></span>							
 				<span class="dot" id="last"></span>									
 			</div>
 		</div>
@@ -117,7 +136,10 @@
 		
 		<!-- Footer -->
 		<div id="footer" class="tabbar">
-			<img class="photo" id="photo" src="https://secure.gravatar.com/avatar/57f5ee2e1627b45e923de962ab0b0eab" alt="Moshe Berman" /><p>Moshe Berman is a student at Brooklyn College. He writes apps for iPhone, iPad, and iPod touch.</p>
+			<img class="photo" id="photo" src="https://secure.gravatar.com/avatar/57f5ee2e1627b45e923de962ab0b0eab" alt="Moshe Berman" />
+
+			<p>I'm a student at Brooklyn College and an iOS Developer. I'm <a href="http://twitter.com/bermaniastudios">@bermaniastudios</a> on twitter.</p>
+			<!-- <p>Moshe Berman is a student at Brooklyn College. He writes apps for iPhone, iPad, and iPod touch.</p> -->
 		</div>	
 	</div>
 </body>
