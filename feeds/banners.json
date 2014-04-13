@@ -2,19 +2,19 @@
 	"banners" :
 	[
 		{
-			"url" : "http://itunes.com/apps/sefira",
+			"url" : "https://itunes.apple.com/us/app/ultimate-omer-2/id366802811?mt=8",
 			"web_banner" : "http://mosheberman.com/images/ultimateomer.png",
 			"mobile_banner" : "http://mosheberman.com/images/ultimateomer-mobile@2x.png",
 			"title" : "Ultimate Omer"
 		},
 		{
-			"url" : "http://itunes.com/apps/zmanim",
+			"url" : "https://itunes.apple.com/us/app/zmanim-zmnym/id452921604?mt=8",
 			"web_banner" : "http://mosheberman.com/images/zmanim.png",
 			"mobile_banner" : "http://mosheberman.com/images/zmanim-mobile@2x.png",
 			"title" : "Zmanim"
 		},
 		{
-			"url" : "http://itunes.com/apps/nippon",
+			"url" : "https://itunes.apple.com/us/app/nippon/id415518235?mt=8",
 			"web_banner" : "http://mosheberman.com/images/nippon.png",
 			"mobile_banner" : "http://mosheberman.com/images/nippon-mobile@2x.png",
 			"title" : "Nippon"
