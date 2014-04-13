@@ -3,17 +3,20 @@
 	[
 		{
 			"url" : "http://itunes.com/apps/sefira",
-			"image_url" : "http://mosheberman.com/images/ultimateomer.png",
+			"web_banner" : "http://mosheberman.com/images/ultimateomer.png",
+			"mobile_banner" : "http://mosheberman.com/images/ultimateomer-mobile@2x.png",
 			"title" : "Ultimate Omer"
 		},
 		{
 			"url" : "http://itunes.com/apps/zmanim",
-			"image_url" : "http://mosheberman.com/images/zmanim.png",
+			"web_banner" : "http://mosheberman.com/images/zmanim.png",
+			"mobile_banner" : "http://mosheberman.com/images/zmanim-mobile@2x.png",
 			"title" : "Zmanim"
 		},
 		{
 			"url" : "http://itunes.com/apps/nippon",
-			"image_url" : "http://mosheberman.com/images/nippon.png",
+			"web_banner" : "http://mosheberman.com/images/nippon.png",
+			"mobile_banner" : "http://mosheberman.com/images/nippon-mobile@2x.png",
 			"title" : "Nippon"
 		}
 	] 	
