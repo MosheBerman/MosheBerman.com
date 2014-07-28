@@ -24,8 +24,8 @@
 			-ms-user-select: none;
 			user-select: none; 		
 			font-family: "HelveticaNeue-Light", "Helvetica", sans-serif;	
-			/* background-image: url("./images/wallpapers/nyc.jpg"); */
-			background-position:50% 50%; 
+			/* background-image: url("./images/wallpapers/nyc.jpg");*/
+			background-position:50% 50%;  /* Sets reference point to scale from */
 			background-size:cover; 
 		}
 		
@@ -276,7 +276,7 @@
 		
 		#columnsWrapper .column .tableView .row a .label
 		{
-			padding-left: 5px;
+			margin-left: 15px;
 			padding-right: 5px;
 			overflow: hidden;
 			width: 87.5%;
@@ -292,6 +292,7 @@
 		#columnsWrapper .column .tableView .row a img + .label
 		{
 			width: 240px;
+			margin-left: 5px;
 		}
 		
 		#columnsWrapper .column .tableView .row a img
@@ -300,6 +301,7 @@
 			width: 34px;
 			float: left;
 			margin: 3px;
+			margin-left: 15px;
 			border-radius: 9px;
 			border: 1px solid rgba(0,0,0,0.2);
 		}
