@@ -1,5 +1,6 @@
 /* Banner timer reference */
 var bannerTimer = null;
+var scrollInterval = 3000;	//	milliseconds
 
 /* Banner class */
 function Banner(href, src, title){
@@ -130,7 +131,7 @@ function scrollBanner()
 		clearTimeout(bannerTimer);	
 		scrollBanner();	
 			
-	}, 5000);
+	}, scrollInterval);
 }
 
 //
