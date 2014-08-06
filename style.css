@@ -1,36 +1,21 @@
 /**
- *	This is the iOS 7+ version of my website.
- *
- *	Semitransparent content: 
- *		- http://stackoverflow.com/questions/806000/transparent-background-but-not-the-content-text-images-inside-it-in-css-on
- *		- http://www.css3.info/opacity_rgba_and_compromise/
- *
- *	Blurred background:
- *		- http://stackoverflow.com/questions/20039765/css-how-to-apply-a-css3-blur-filter-to-a-background-image-that-i-am-setting-wit 
- *		- http://codepen.io/aniketpant/pen/DsEve
+ *	This is the iOS 6 themed version of my website.
  */
-
-
-		body
-		{
+		body{
 			margin: 0;
 			padding: 0;
 			text-align: center;
+			font-family: sans-serif, sans;
 			/* disables selecting */
 			-webkit-touch-callout: none;
 			-webkit-user-select: none;
 			-khtml-user-select: none;
 			-moz-user-select: none;
 			-ms-user-select: none;
-			user-select: none; 		
-			font-family: "HelveticaNeue-Light", "Helvetica", sans-serif;	
-			/* background-image: url("./images/wallpapers/nyc.jpg"); */
-			background-position:50% 50%; 
-			background-size:cover; 
+			user-select: none; 			
 		}
 		
-		#outerWrapper
-		{
+		#outerWrapper{
 			width: 960px;
 			margin-left: auto;
 			margin-right: auto;
@@ -44,8 +29,7 @@
 		
 		/* Banner */
 		
-		#bannerWrapper
-		{
+		#bannerWrapper{
 			display: block;
 			height: 200px;
 			margin: 0;	
@@ -56,8 +40,7 @@
 			overflow: hidden;
 		}
 		
-		#innerBanner
-		{
+		#innerBanner{
 			display:block;
 			height:200px;
 			margin: 0px;
@@ -65,8 +48,7 @@
 			width:2880px;
 		}
 		
-		.banner
-		{
+		.banner{
 			display: block;		
 			float: left;			
 			height: 200px;
@@ -74,8 +56,7 @@
 			background-color: #ddddff;
 		}
 		
-		.banner a
-		{
+		.banner a{
 			display: block;
 			float: left;		
 			width: 960px;
@@ -85,8 +66,7 @@
 			font-size: 0;
 		}
 		
-		#bannerControls
-		{
+		#bannerControls{
 			display: none;
 			float: left;
 			height: 25px;
@@ -95,8 +75,7 @@
 			text-align: center;
 		}
 		
-		#buttonWrapper
-		{
+		#buttonWrapper{
 			display: block;
 			width: 42px; /* 10px + 2px + 2px for each dot */
 			height: 10px;
@@ -105,8 +84,7 @@
 			margin-top: 5px;
 		}
 		
-		.dot
-		{
+		.dot{
 			display: block;
 			height: 10px;
 			width: 10px;
@@ -114,14 +92,13 @@
 			margin: 0 2px;
 			float: left;
 			background-color: #fff;
-			box-shadow: 0 0 1px #666;
+			box-shadow: 0 0 2px #666;
 			-moz-opacity: 0.5;
 			-webkit-opacity: 0.5;
 			opacity: 0.5;
 		}
 		
-		.selectedDot
-		{
+		.selectedDot{
 			-moz-opacity: 1.0;
 			-webkit-opacity: 1.0;
 			opacity: 1.0;					
@@ -129,61 +106,56 @@
 		
 		/* Three columns */
 		
-		#columnsWrapper
-		{
+		#columnsWrapper{
 			display: block;
-			margin: 0;	
-			padding: 0;		
+			margin: 0;			
 			width: 960px;
 			float: left;			
 		}
 		
-		.column
-		{
+		.column{
 			width: 320px;
 			float: left;
 			height: 0px;
 			overflow: auto;
 			padding: 0;
 			background-color: #c4ccd5;
-			background-size: 10px;		
-			margin-top: -44px;
-			padding-top: 44px;
-			z-index: 0;		
+			background-image: linear-gradient(90deg, #cad2d8 50%, #c4ccd5 50%);
+			background-image: -webkit-linear-gradient(left, #cad2d8 50%, #c4ccd5 50%);			
+			background-size: 10px;				
 		}
 		
 		/* Set up the feed column to show borders*/
 		
-		div#feedColumn, div.middle
-		{
+		div#feedColumn, div.middle{
 			width: 318px;
 			border-left: 1px solid #111;
 			border-right: 1px solid #111;
 		}
+
+		
+		/* The bio section */
 			
 		/* Height should match the dimensions of the photo */
 		
-		#appColumn .singleGroupCell
-		{
+		#appColumn .singleGroupCell{
 			border-radius: 8px;
 			background-color: #fff;
 			border: 1px solid #000;
 			margin: 10px;
 			height: 72px;
 			padding: 0;
-			font-family: "HelveticaNeue-Light", "Helvetica", sans-serif;
+			font-weight: 100;
 			color: gray;
 			font-size: 12px;
 		}
 		
-		.singleGroupCell p
-		{
+		.singleGroupCell p{
 			padding: 2px;
 			margin: 0;
 		}
 				
-		.singleGroupCell.photo
-		{
+		.singleGroupCell.photo{
 			display: block;
 			float: left;
 			margin: 0;
@@ -195,122 +167,80 @@
 			padding-right: 5px;
 		}
 	
-		/**
-		 *	The navbars
-		 */
-
-		.navbar
-		{
-			width:100%;
-			height: 44px;
-			width: 320px;
-			float: left;
-			color: #fff;
-			line-height: 44px;
-			border-bottom: 1px solid #222;
-			background: rgba(255,255,255,0.95); /* based on http://ilee.co.uk/ios7-navigation-bar-using-css/ */
-			z-index: 99;
-			position: relative;
-		}
-
-		.navbar a
-		{
-			text-decoration: none;
-			color: #007aff;
-			padding: 5px 7px;
-			border-radius: 5px;			
-			border: 1px solid #007aff;
-			font-family: "HelveticaNeue-Light", "Helvetica", sans-serif;	
-			z-index: 99;
-		}
+		
 		/* The blog and github feeds */
 		
-		.loading
-		{
+		.loading{
 			display: none;
 			line-height: 320px;
 			vertical-align: middle;
-			font-weight: bold;
-			color: gray;
+			color: #fff;
 			
 		}
 		
-		.tableView
-		{
+		.tableView{
 			list-style-type: none;
 			padding: 0;
 			margin: 0;
-			margin-top: -44px;
-			padding-top: 44px;
 			overflow: hidden;
 		}
 		
-		.tableView .row
-		{
+		.tableView .row{
 			margin: 0;
 			padding: 0;
-			padding-bottom: 5px;
 			display: block;
-			height: 39px;
-			width: 100%;
+			height: 44px;
+			width: 319px;
 			float: left;
 			font-size: 14px;
 			line-height: 44px;
 			overflow: hidden;
+			border-bottom: 1px solid #aaa;
 			text-align: left;
-			background-color: rgba(255, 255, 255 ,1.0);
-			box-shadow: inset 15px 0 #fff, inset -1px 0 #fff, inset 0 -1px 0 0 #007aff; /* Fake partial borders courtesy of http://landonschropp.com/blog/partial-borders-in-css/ */
+			background-color: #ffffff;
 		}
 		
-		#columnsWrapper .column .tableView .row a
-		{
+		.tableView .row a{
 			display: block;
 			float: left;
-			width: 100%;
+			width: 314px;
 			white-space: nowrap;
 			overflow: hidden;		
 			text-decoration: none;
-			font-family: "HelveticaNeue", "Helvetica", sans-serif;	
-			color: #000;
+			font-weight: bold;			
+			color: black;
 		}
 		
-		#columnsWrapper .column .tableView .row a .label
-		{
+		.tableView .row a .label{
 			padding-left: 5px;
-			padding-right: 5px;
 			overflow: hidden;
-			width: 87.5%;
-			display: block;
-			float: left;
-			text-overflow: ellipsis;
+			text-overflow: ellipsis;				
 		}		
-
-		/** 
-		 *	If the cell has an image in it, use a narrower label.
-		 */
-
-		#columnsWrapper .column .tableView .row a img + .label
-		{
-			width: 240px;
+		
+		.tableView .row img{
+			height: 40px;
+			width: 40px;
+			float: left;
+			margin: 2px;
+			padding: 0;
+			border-radius: 6px;
+			box-shadow: 0px 0 2px #aaa;
 		}
 		
-		#columnsWrapper .column .tableView .row a img
-		{
-			height: 34px;
-			width: 34px;
-			float: left;
-			margin: 3px;
-			border-radius: 9px;
-			border: 1px solid rgba(0,0,0,0.2);
+		.tableView .dark{
+			background-color: #bebebe;
+		}
+		
+		.tableView .light{
+			background-color: #dedede;
 		}
 		
 		/* The footer */
 		
-		#footer
-		{
+		#footer{
 			display: block;
-			height: 44px;
-			line-height: 44px;
+			height: 49px;
+			line-height: 49px;
 			vertical-align: middle;
 			width: 960px;
 			float: left;
@@ -320,8 +250,7 @@
 			border-top: 1px solid #000;
 		}
 		
-		#footer #photo
-		{
+		#footer #photo{
 			display: block;
 			width: 40px;
 			height: 40px;
@@ -331,25 +260,79 @@
 			border-radius: 3px;
 		}
 		
-		#footer p
-		{
+		#footer p{
 			margin: 0;
 			font-weight:100;
 			font-size: 14px;
 		}
 		
-		/* Tab Bars */
+		#footer a{
+			color: #ffffff;
+		}
 
-		.tabbar
-		{
+		#footer a:hover {
+			text-decoration: underline;
+		}
+
+		/* Bars */
+		
+		.navbar{
+			width:100%;
+			height: 44px;
+			width: 320px;
+			float: left;
+			color: #fff;
+			line-height: 44px;
+			text-shadow: 0 -1px 1px #7c899b;
+			font-weight: normal;
+			border-bottom: 1px solid #222;
+			
+			background: #afbbce; /* Old browsers */
+			/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I4YzZkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzdiOTBiNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzZkODhiNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0Zjc0YjUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+			background: -moz-linear-gradient(top,  #afbbce 0%, #8a9cb7 50%, #7f94b1 50%, #6b82a4 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#aeaeae), color-stop(50%,#8a9cb7), color-stop(50%,#7f94b1), color-stop(100%,#6b82a4)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  #afbbce 0%, #8a9cb7 50%, #7f94b1 50%, #6b82a4 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  #afbbce 0%,#8a9cb7 50%,#7f94b1 50%,#6b82a4 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  #afbbce 0%,#8a9cb7 50%,#7f94b1 50%,#6b82a4 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  #afbbce 0%,#8a9cb7 50%,#7f94b1 50%,#6b82a4 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#afbbce', endColorstr='#6b82a4',GradientType=0 ); /* IE6-8 */
+		}
+
+		.navbar a{
+			text-decoration: none;
+			color: #fff;
+			padding: 5px 7px;
+			border-radius: 5px;			
+			border: 1px solid #364d75;
+			
+			font-size: 14px;
+			
+			background: #8ca2c3; /* Old browsers */
+			/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I4YzZkZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzdiOTBiNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzZkODhiNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0Zjc0YjUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+			background: -moz-linear-gradient(top,  #8ca2c3 0%, #5674a4 50%, #46659c 50%, #49699e 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8ca2c3), color-stop(50%,#46659c), color-stop(50%,#7f94b1), color-stop(100%,#49699e)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  #8ca2c3 0%, #5674a4 50%, #46659c 50%, #49699e 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  #8ca2c3 0%,#5674a4 50%,#46659c 50%,#49699e 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  #8ca2c3 0%,#5674a4 50%,#46659c 50%,#49699e 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  #8ca2c3 0%,#5674a4 50%,#46659c 50%,#49699e 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ca2c3', endColorstr='#49699e',GradientType=0 ); /* IE6-8 */			
+			
+		}
+
+		.tabbar{
 			height: 49px;
 			color: #fff;
 			font-family: Helvetica, sans;
-			background: rgba(255, 255, 255, 0.8);
-			color: #000;
-		}
-
-		.tabbar a
-		{
-				color: #007aff;
+			background: #484848; /* Old browsers */
+			/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+			background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2FlYmNiZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzZlNzc3NCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzBhMGUwYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNzA1MDYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+			background: -moz-linear-gradient(top, #484848 0%, #353535 50%, #252525 51%, #242424 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#484848), color-stop(50%,#353535), color-stop(51%,#252525), color-stop(100%,#242424)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, #484848 0%,#353535 50%,#252525 51%,#242424 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, #484848 0%,#353535 50%,#252525 51%,#242424 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, #484848 0%,#353535 50%,#252525 51%,#242424 100%); /* IE10+ */
+			background: linear-gradient(to bottom, #484848 0%,#353535 50%,#252525 51%,#242424 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484848', endColorstr='#242424',GradientType=0 ); /* IE6-8 */
 		}
