@@ -1,0 +1,467 @@
+{
+    "version" : 1,
+    "chapters" : [
+                  {
+                  "name" : "Antwerp",
+                  "hotline" : "03-289-00-00",
+                  "location" :
+                  {
+                  "latitude" : 51.201788,
+                  "longitude" : 4.412963
+                  },
+                  
+                  "address" : "239 Mechelsesteenweg bus14 2018 Antwerpen",
+                  "url" : "http://hatzoloh.be",
+                  "phone" : "03-218-45-57",
+                  "email" : "coordinator@hatzoloh.be"
+                  },
+                  {
+                  "name": "Baltimore",
+                  "hotline": "410-358-0000",
+                  "location": {
+                  "latitude": 39.362695,
+                  "longitude": -76.689162
+                  },
+                  "address": "3106 Pinkney Rd Baltimore, MD 21215",
+                  "phone": "410-585-0054",
+                  "url": "https://www.hatzalahbaltimore.org",
+                  "email": "support@hatzalahbaltimore.org"
+                  },
+                  {
+                  "name": "Boro Park",
+                  "hotline": "718-387-1750",
+                  "location": {
+                  "latitude": 40.629262,
+                  "longitude": -73.987335
+                  },
+                  "address": "5215 16th Avenue Brooklyn, NY 11204",
+                  "url": "https://www.bphatzolah.org",
+                  "phone": "718-871-6644",
+                  "email": "info@BPHatzolah.org"
+                  },
+                  {
+                  "name": "Brooklyn",
+                  "hotline": "718-230-1000",
+                  "location": {
+                  "latitude": 40.624437,
+                  "longitude": -73.947158
+                  },
+                  "address": "2905 Avenue K Brooklyn, NY 11210",
+                  "url": "<#url#>",
+                  "phone": "718-253-1391",
+                  "email": "<#email@address.com#>"
+                  },
+                  {
+                  "name" : "Catskills",
+                  "hotline" : "718-387-1750",
+                  "location" :
+                  {
+                  "latitude" : 41.655647,
+                  "longitude" : -74.689328
+                  },
+                  "address" : "POB 50 Monticello, NY 12701",
+                  "url" : "http://www.chvac.net/",
+                  "phone" : "718-998-9000",
+                  "email" : "info@chatzalah.org"
+                  },
+                  {
+                  "name": "Chicago",
+                  "hotline": "847-504-1500",
+                  "location": {
+                  "latitude": 42.029484,
+                  "longitude": -87.711108
+                  },
+                  "address": "8170 N McCormick Blvd Skokie, IL 60076",
+                  "url": "http://hatzalahchicago.org",
+                  "phone": "847-454-0800",
+                  "email": "<#email@address.com#>"
+                  },
+                  {
+                  "name": "Crown Heights",
+                  "hotline": "718-387-1750",
+                  "location": {
+                  "latitude": 40.668993,
+                  "longitude": -73.94287
+                  },
+                  "address": "383 Kingston Avenue, Suite #99, Brooklyn, NY 11213",
+                  "url": "http://www.hatzalah.ch",
+                  "phone": "<#office-phone#>",
+                  "email": "info@Hatzalah.ch"
+                  },
+                  {
+                  "name": "Jersey Shore",
+                  "hotline": "732-531-9988",
+                  "location": {
+                  "latitude": 40.269167,
+                  "longitude": -73.991667
+                  },
+                  "address": "PO Box 2333 Elberon, NJ 07740-2333",
+                  "url": "http://hatzalahems.com",
+                  "phone": "732-531-4322",
+                  "email": "<#email@address.com#>"
+                  },
+                  {
+                  "name" : "Flatbush",
+                  "hotline" : "718-230-1000",
+                  "location" :
+                  {
+                  "latitude" : 40.615891,
+                  "longitude" : -73.954788
+                  },
+                  "address" : "1880 Ocean Avenue, Brooklyn NY 11230",
+                  "url" : "http://flatbushhatzoloh.org",
+                  "phone" : "718-376-1900",
+                  "email" : "coordinators@flatbushhatzoloh.com"
+                  },
+                  {
+                  "name": "Fleischmanns",
+                  "hotline": "845-254-5555",
+                  "location": {
+                  "latitude": 42.158847,
+                  "longitude": -74.519254
+                  },
+                  "address": "400 Lake Street, Fleischmann's New York",
+                  "url": "http://www.oppenheimersregis.com/",
+                  "phone": " 845-254-5080",
+                  "email": "OppenheimersRegis@gmail.com"
+                  },
+                  {
+                  "name" : "Los Angeles",
+                  "hotline" : "800-613-1911",
+                  "location" :
+                  {
+                  "latitude" : 34.054712,
+                  "longitude" : -118.390203
+                  },
+                  "address" : "1417 S. Doheny Ave. Los Angeles CA 90035",
+                  "url" : "http://www.hatzolahofla.org",
+                  "phone" : "323-535-3827",
+                  "email" : "hatzolah133@gmail.com"
+                  },
+                  {
+                  "name": "Johannesburg",
+                  "hotline": "083-222-1818",
+                  "location": {
+                  "latitude": -26.148938,
+                  "longitude": 28.094887
+                  },
+                  "address": "29 Durham Street, Raedene 2192",
+                  "url": "https://www.hatzolah.co.za",
+                  "phone": "0860-100-101",
+                  "email": "info@hatzolah.co.za"
+                  },
+                  {
+                  "name": "Kiryas Tosh",
+                  "hotline": "450-434-2222",
+                  "location": {
+                  "latitude": 45.613523,
+                  "longitude": -73.872362
+                  },
+                  "address": "26 Beth Halevy ave. Boisbriand QC J7E-4H4",
+                  "url": "http://www.hatzolah.com",
+                  "phone": "450-435-6738",
+                  "email": "sabh@aei.ca"
+                  },
+                  {
+                  "name" : "Lakewood",
+                  "hotline" : "732-370-3600",
+                  "location" :
+                  {
+                  "latitude" : 40.106688,
+                  "longitude" : -74.224094
+                  },
+                  "address" : "501 West County Line Rd, Lakewood New Jersey 08701",
+                  "url" : "http://www.lakewoodhatzolah.com",
+                  "phone" : " 732-363-5600",
+                  "email" : "radio@lakewoodhatzolah.com"
+                  },
+                  {
+                  "name": "Melbourne",
+                  "hotline": "03-9527-5111",
+                  "location": {
+                  "latitude": -37.865587,
+                  "longitude": 145.009885
+                  },
+                  "address": "320 Orrong Road CAULFIELD NORTH VIC 3161",
+                  "url": "http://hatzolah.org.au/",
+                  "phone": "03-8534-0100",
+                  "email": "info@hatzolah.org.au"
+                  },
+                  {
+                  "name": "Mexico",
+                  "hotline": "5888-9999",
+                  "location": {
+                  "latitude": 19.432608,
+                  "longitude": -99.133208
+                  },
+                  "address": "<#address#>",
+                  "url": "http://hatzalah.mx",
+                  "phone": "<#office-phone#>",
+                  "email": "director@hatzalah.org"
+                  },
+                  {
+                  "name": "Miami-Dade",
+                  "hotline": "305-919-4900",
+                  "location": {
+                  "latitude": 25.924016,
+                  "longitude": -80.176905
+                  },
+                  "address": "16101 NE 11th Ct N. Miami Beach, FL 33162",
+                  "url": "http://www.miamihatzalah.com",
+                  "phone": "305-490-5274",
+                  "email": "info@miamihatzalah.com"
+                  },
+                  {
+                  "name" : "Mill Basin",
+                  "hotline" : "718-230-1000",
+                  "location" :
+                  {
+                  "latitude" : 40.616275,
+                  "longitude" : -73.912611
+                  },
+                  "address" : "6363 Ave U Brooklyn, N.Y. 11234",
+                  "url" : "http://www.millbasinhatzolah.org",
+                  "phone" : "347-462-2050",
+                  "email" : "info@millbasinhatzolah.org"
+                  },
+                  {
+                  "name": "Montreal (M)",
+                  "hotline": "514-341-1818",
+                  "location": {
+                  "latitude": 45.52795,
+                  "longitude": -73.616037
+                  },
+                  "address": "6700 ave De Parc Room 240 Montreal, QC, H2V 4H9",
+                  "url": "http://hatzoloh.ca/",
+                  "phone": "514-448-4999",
+                  "email": "hatzolohoffice@gmail.com"
+                  },
+                  {
+                  "name": "Montreal (D&W)",
+                  "hotline": "514-341-1818",
+                  "location": {
+                  "latitude": 45.51633,
+                  "longitude": -73.625491
+                  },
+                  "address": "1090 Pratt, Suite 202 Montreal, QC, H2V 2V2",
+                  "url": "http://hatzoloh.ca/",
+                  "phone": "514-344-2580",
+                  "email": "hatzolohdw@gmail.com"
+                  },
+                  {
+                  "name" : "New York City",
+                  "hotline" : "212-230-1000",
+                  "location" :
+                  {
+                  "latitude" : 40.714135,
+                  "longitude" : -73.986433
+                  },
+                  "address" : "235 E Broadway New York, NY 10002",
+                  "url" : "<#url#>",
+                  "phone" : "212-233-6037",
+                  "email" : "<#email@address.com#>"
+                  },
+                  {
+                  "name" : "Passaic",
+                  "hotline" : "973-472-1002",
+                  "location" :
+                  {
+                  "latitude" : 40.856766,
+                  "longitude" : -74.128476
+                  },
+                  "address" : "PO Box 5120, Passaic, NJ 07055",
+                  "url" : "http://www.hatzolahpassaic.net",
+                  "phone" : "973-685-4911",
+                  "email" : "info@hatzolahpassaic.net"
+                  },
+                  {
+                  "name" : "Philadelphia",
+                  "hotline" : "215-677-6700",
+                  "location" :
+                  {
+                  "latitude" : 40.109719,
+                  "longitude" : -75.043844
+                  },
+                  "address" : "Post Office Box 18182, Philadelphia, Pennsylvania 19116",
+                  "url" : "http://www.philadelphiahatzolah.org",
+                  "phone" : "<#office-phone#>",
+                  "email" : "info@PhiladelphiaHatzolah.org"
+                  },
+                  {
+                  "name": "Queens",
+                  "hotline": "718-387-1750",
+                  "location": {
+                  "latitude": 40.704841,
+                  "longitude": -73.830298
+                  },
+                  "address": "83-26 Brevoort Street Kew Gardens, NY 11415",
+                  "url": "http://queenshatzolah.org",
+                  "phone": "718-441-5859",
+                  "email": "coordinator@queenshatzolah.org"
+                  },
+                  {
+                  "name" : "Riverdale",
+                  "hotline" : "212-230-1000",
+                  "location" :
+                  {
+                  "latitude" : 40.903981,
+                  "longitude" : -73.914126
+                  },
+                  "address" : "P.O. Box 181, Riverdale Station  Riverdale, NY 10471",
+                  "url" : "http://www.riverdalehatzalah.org",
+                  "phone" : "347-275-5879",
+                  "email" : "info@riverdalehatzalah.org"
+                  }, 
+                                   {
+                  "name" : "Rockaways & Nassau County",
+                  "hotline" : "212-230-1000",
+                  "location" :
+                  {
+                  "latitude" : 40.600852,
+                  "longitude" : -73.745726
+                  },
+                  "address" : "621 Beach 9th Street Far Rockaway, NY 11691",
+                  "url" : "http://www.hatzalahrl.org",
+                  "phone" : "718-337-5445",
+                  "email" : "<#email@address.com#>"
+                  },
+                  {
+                  "name" : "Rockland",
+                  "hotline" : "845-425-1600",
+                  "location" :
+                  {
+                  "latitude" : 41.111010,
+                  "longitude" : -74.070756
+                  },
+                  "address" : "19 Grove St. Monsey, NY 10952",
+                  "url" : "http://www.hatzolohems.com",
+                  "phone" : "845-425-8979",
+                  "email" : "sklein@hatzolohems.org"
+                  },
+                  {
+                  "name" : "Southern Israel",
+                  "hotline" : "101",
+                  "location" :
+                  {
+                  "latitude" : 31.804381,
+                  "longitude" : 34.655314
+                  },
+                  "address" : "21 Rabbi Eliezer ben Horkanus St. #4 Ashdod, Israel 77652",
+                  "url" : "http://www.hatzolahdarom.org",
+                  "phone" : " 011-972-8-866-4431",
+                  "email" : "info@hatzolahdarom.org"
+                  },
+                  {
+                  "name" : "Sydney",
+                  "hotline" : "02-9371-2222",
+                  "location" :
+                  {
+                  "latitude" : -33.858935,
+                  "longitude" : 151.278408
+                  },
+                  "address" : "PO Box 470  Vaucluse, NSW, 2030 Australia",
+                  "url" : "http://www.hatzolah.com.au/",
+                  "phone" : "02-9371-2211",
+                  "email" : "info@hatzolah.com.au"
+                  },
+                  {
+                  "name": "Toronto",
+                  "hotline": "416-256-1000",
+                  "location": {
+                  "latitude": 43.718501,
+                  "longitude": -79.433084
+                  },
+                  "address": "534 Lawrence Ave West #219 Toronto Ontario, M6A1A2",
+                  "url": "http://www.hatzolohtoronto.org",
+                  "phone": "416-398-2300",
+                  "email": "mendel@hatzolohtoronto.org"
+                  },
+                  {
+                  "name" : "Union City",
+                  "hotline" : "201-422-9000",
+                  "location" :
+                  {
+                  "latitude" : 40.772552,
+                  "longitude" : -74.027212
+                  },
+                  "address" : "3400 New York Ave, Union City, NJ 7087-3906",
+                  "url" : "<#url#>",
+                  "phone" : "<#office-phone#>",
+                  "email" : "<#email@address.com#>"
+                  },
+                  {
+                  "name": "Elizabeth",
+                  "hotline": "908-659-9550",
+                  "location": {
+                  "latitude": 40.651752,
+                  "longitude": -74.214998
+                  },
+                  "address": "PO Box 9355 Elizabeth NJ 07202-9355 ",
+                  "url": "http://hatzalahofunioncounty.org",
+                  "phone": "908-337-4155",
+                  "email": "info@hatzalahofunioncounty.org"
+                  },
+                  {
+                  "name" : "Washington Heights",
+                  "hotline" : "212-230-1000",
+                  "location" :
+                  {
+                  "latitude" : 40.840145,
+                  "longitude" : -73.938921
+                  },
+                  "address" : "<#address#>",
+                  "url" : "<#url#>",
+                  "phone" : "<#office-phone#>",
+                  "email" : "<#email@address.com#>"
+                  },
+                  {
+                  "name": "Williamsburg",
+                  "hotline": "718-387-1750",
+                  "location": {
+                  "latitude": 40.706151,
+                  "longitude": -73.952202
+                  },
+                  "address": "318 Penn Street Brooklyn , NY 11211",
+                  "url": "http://www.hatzolahw.com",
+                  "phone": "718-534-5050"
+                  },
+                  {
+                  "name": "Waterbury",
+                  "hotline": "203-754-4200",
+                  "location": {
+                  "latitude": 41.562749,
+                  "longitude": -73.040038
+                  },
+                  "address": "47 Buckingham Street Waterbury, CT 06710",
+                  "url": "http://hatzalahofwaterbury.org",
+                  "phone": "<#office-phone#>",
+                  "email": "admin@hatzalahofwaterbury.org"
+                  },
+                  {
+                  "name" : "The West Side (NYC)",
+                  "hotline" : "212-230-1000",
+                  "location" :
+                  {
+                  "latitude" : 40.787292,
+                  "longitude" : -73.973244
+                  },
+                  "address" : "131 West 86th Street New York, NY 10024",
+                  "url" : "http://www.westsidehatzoloh.org",
+                  "phone" : "<#office-phone#>",
+                  "email" : "info@westsidehatzoloh.org"
+                  },
+                  {
+                  "name" : "Zurich",
+                  "hotline" : "044-202-3060",
+                  "location" :
+                  {
+                  "latitude" : 47.369510,
+                  "longitude" : 8.522575
+                  },
+                  "address" : "GemeinnÃ¼tziger Verein HAZOLOH Aegertenstrasse 36 8003 ZÃ¼rich",
+                  "url" : "http://www.hazoloh.ch",
+                  "phone" : "<#office-phone#>",
+                  "email" : "info@hazoloh.ch"
+                  }
+                  ]
+}

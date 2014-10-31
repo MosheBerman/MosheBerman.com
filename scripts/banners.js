@@ -18,7 +18,7 @@ function loadBanners(){
 	var omer = Banner("http://itunes.com/apps/sefira", "./images/banners/apps/ultimateomer.png", "Ultimate Omer");
 	var zmanim = Banner("http://itunes.com/apps/zmanim", "./images/banners/apps/zmanim.png", "Zmanim");	
 	var nippon = Banner("http://itunes.com/apps/nippon", "./images/banners/apps/nippon.png", "Nippon");	
-	var autumn = Banner("http://mosheberman.com/autumn", "./images/banners/campaigns/autumn/Teaser-0.png", "Autumn")
+	var autumn = Banner("http://mosheberman.com", "./images/banners/campaigns/autumn/Teaser-2.png", "Upcoming Apps")
 
 	//
 	//	Load the banners into an array
