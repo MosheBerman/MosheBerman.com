@@ -1,3 +1,6 @@
+/**
+ *	This is the iOS 6 themed version of my website.
+ */
 		body{
 			margin: 0;
 			padding: 0;
@@ -263,6 +266,14 @@
 			font-size: 14px;
 		}
 		
+		#footer a{
+			color: #ffffff;
+		}
+
+		#footer a:hover {
+			text-decoration: underline;
+		}
+
 		/* Bars */
 		
 		.navbar{

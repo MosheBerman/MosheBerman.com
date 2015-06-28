@@ -8,24 +8,35 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	
 	<style>
-		@import "style.css";
+		@import "style7.css";
 	</style>
 	
-	<!-- jQuery first, then alphabetical -->
-	
+
+	<!-- This script just switches debug on, for logging. -->
+
+	<script type="text/javascript" src="./debug/scripts/debug.js"></script>
+
 	<script type="text/javascript"> 
 
-		var console = {};
-		console.log = function(){};
+		if(typeof console === null || !debug)
+		{
+			var console = {};
+			console.log = function(){};	
+		}
+		else
+		{
+			console.log("Console is ready to go.");
+		}
 	</script>
 
+	<!-- jQuery first, then alphabetical -->
+
 	<script type="text/javascript" src="http://mosheberman.com/scripts/jquery172.js"></script>
-	
 	<script type="text/javascript" src="http://mosheberman.com/scripts/center.js"></script>	
 	<script type="text/javascript" src="http://mosheberman.com/scripts/feed.js"></script>
 	<script type="text/javascript" src="http://mosheberman.com/scripts/redirect.js"></script>	
 	<script type="text/javascript" src="http://mosheberman.com/scripts/photo.js"></script>
-	<script type="text/javascript" src="http://mosheberman.com/scripts/banners.js"></script>	
+	<script type="text/javascript" src="./scripts/banners.js"></script>	
 	
 	<script type="text/javascript">
 		$(document).ready(
@@ -38,8 +49,9 @@
 			loadFeedFromURL("http://blog.mosheberman.com/feed/");
 			loadGitReposFromURL("https://api.github.com/users/mosheberman/repos?callback=?");
 			expandColumns();
-			configureBannerSelect();
 			loadBanners();
+			configureBannerSelect();
+			
 			
 			$('.dot').eq(0).addClass('selectedDot');
 			$('#bannerControls').css('display', 'block');			
@@ -69,27 +81,8 @@ ga('send', 'pageview');
 		<!-- The main banner -->
 		<div id="bannerWrapper">
 			<div id="innerBanner">
-				<!-- TODO: Change the links to point to a template. -->
-				<div class="banner">
-					<a href="http://gabbai.mosheberman.com" class="bannerLink">
-						<img class="bannerImage" src="http://mosheberman.com/images/gabbai@2x.png" height="200" width="960" alt="Gabbai. A new kind of digital zmanim clock." />
-					</a>
-				</div>				
-				<div class="banner">
-					<a href="http://itunes.com/apps/mosheberman/sefira" class="bannerLink">
-						<img class="bannerImage" src="http://mosheberman.com/images/ultimateomer@2x.png" height="200" width="960" alt="Ultimate Omer 2" />
-					</a>
-				</div>
-				<div class="banner">
-					<a href="http://itunes.com/apps/mosheberman/zmanim" class="bannerLink">
-					<img class="bannerImage" src="http://mosheberman.com/images/zmanim@2x.png" height="200" width="960" alt="Zmanim for iPhone" />
-					</a>
-				</div>			
-				<div class="banner">
-					<a href="http://itunes.com/apps/mosheberman/nippon" class="bannerLink">
-					<img class="bannerImage" src="./images/nippon@2x.png" height="200" width="960" alt="Nippon" />							
-					</a>
-				</div>			
+				<!-- TODO: Change the links to point to a template. -->		
+				<p>Loading banners...</p>
 			</div>
 		</div>
 		
