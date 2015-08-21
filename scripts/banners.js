@@ -1,6 +1,5 @@
 /* Banner timer reference */
 var bannerTimer = null;
-var scrollInterval = 3000;	//	milliseconds
 
 /* Banner class */
 function Banner(href, src, title){
@@ -16,15 +15,17 @@ function Banner(href, src, title){
 function loadBanners(){
 	
 	var omer = Banner("http://itunes.com/apps/sefira", "./images/banners/apps/ultimateomer.png", "Ultimate Omer");
-	var zmanim = Banner("http://itunes.com/apps/zmanim", "./images/banners/apps/zmanim.png", "Zmanim");	
+	var zmanim = Banner("http://itunes.com/apps/zmanim", "./images/banners/apps/ZmanimWebsite.png", "Ultimate Zmanim");	
 	var nippon = Banner("http://itunes.com/apps/nippon", "./images/banners/apps/nippon.png", "Nippon");	
-	var autumn = Banner("http://mosheberman.com", "./images/banners/campaigns/autumn/Teaser-2.png", "Upcoming Apps")
+	var colors = Banner("http://appstore.com/mosheberman", "./images/banners/apps/Colors.png", "Colors");
+	var jms = Banner("https://itunes.apple.com/us/app/jewishmusic-stream/id376238913?mt=8", "./images/banners/apps/jms.png", "Jewish MusicStream");
+	var wedding = Banner("http://www.amazon.com/registry/wedding/G1325FPO9IIJ", "./images/banners/personal/WeddingWebsite.png", "Wedding Registry on Amazon")
 
 	//
 	//	Load the banners into an array
 	//
 	
-	var banners = [autumn, omer, nippon, zmanim];
+	var banners = [colors, zmanim, jms];
 
 	//
 	//	Precache some elements
@@ -131,7 +132,7 @@ function scrollBanner()
 		clearTimeout(bannerTimer);	
 		scrollBanner();	
 			
-	}, scrollInterval);
+	}, 5000);
 }
 
 //
