@@ -19,13 +19,13 @@ function loadBanners(){
 	var nippon = Banner("http://itunes.com/apps/nippon", "./images/banners/apps/nippon.png", "Nippon");	
 	var colors = Banner("http://appstore.com/mosheberman", "./images/banners/apps/Colors.png", "Colors");
 	var jms = Banner("https://itunes.apple.com/us/app/jewishmusic-stream/id376238913?mt=8", "./images/banners/apps/jms.png", "Jewish MusicStream");
-	var wedding = Banner("http://www.amazon.com/registry/wedding/G1325FPO9IIJ", "./images/banners/personal/WeddingWebsite.png", "Wedding Registry on Amazon")
+	var wedding = Banner("http://mosheberman.com/wedding", "./images/banners/personal/WeddingWebsite.png", "Our Wedding")
 
 	//
 	//	Load the banners into an array
 	//
 	
-	var banners = [colors, zmanim, jms];
+	var banners = [wedding, colors, zmanim, jms];
 
 	//
 	//	Precache some elements
