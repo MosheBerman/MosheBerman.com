@@ -151,6 +151,18 @@
                   "email": "info@hatzolah.co.za"
                   },
                   {
+                  "name": "Kiryas Joel",
+                  "hotline": "845-783-1212",
+                  "location": {
+                  "latitude": 41.342366,
+                  "longitude": -74.169065
+                  },
+                  "address": "63 Forest Rd, Monroe NY 10950",
+                  "url": "<#url#>",
+                  "phone": "845-371-4141",
+                  "email": "Office@kiryasjoelvolunteerems.org"
+                  },
+                  {
                   "name": "Kiryas Tosh",
                   "hotline": "450-434-2222",
                   "location": {
@@ -262,6 +274,19 @@
                   "email" : "<#email@address.com#>"
                   },
                   {
+                  "name" : "Panama",
+                  "hotline" : "294-5000",
+                  "location" :
+                  {
+                  "latitude" : 8.973866,
+                  "longitude" : -79.516959
+                  },
+                  "address" : "Hotel Plaza Paitilla Inn Av Italia PanamÃ¡",
+                  "url" : "http://www.uhpma.org",
+                  "phone" : "235-4627",
+                  "email" : "info@uhpma.org"
+                  },
+                  {
                   "name" : "Passaic",
                   "hotline" : "973-472-1002",
                   "location" :
@@ -273,7 +298,7 @@
                   "url" : "http://www.hatzolahpassaic.net",
                   "phone" : "973-685-4911",
                   "email" : "info@hatzolahpassaic.net"
-                  },
+                  },                  
                   {
                   "name" : "Philadelphia",
                   "hotline" : "215-677-6700",
@@ -390,17 +415,29 @@
                   "email" : "<#email@address.com#>"
                   },
                   {
+                  "name": "Middlesex County",
+                  "hotline": "732-640-5545",
+                  "location": {
+                  "latitude": 40.526424,
+                  "longitude": -74.386982
+                  },
+                  "address": "P.O. Box 778, Edison, NJ, 08818",
+                  "url": "http://hatzolahmc.org",
+                  "phone": "732-993-8645",
+                  "email": "info@hatzolahmc.org"
+                  },
+                  {
                   "name": "Elizabeth",
                   "hotline": "908-659-9550",
                   "location": {
                   "latitude": 40.651752,
                   "longitude": -74.214998
                   },
-                  "address": "PO Box 9355 Elizabeth NJ 07202-9355 ",
+                  "address": "PO Box 9355 Elizabeth NJ 07202-9355",
                   "url": "http://hatzalahofunioncounty.org",
                   "phone": "908-337-4155",
                   "email": "info@hatzalahofunioncounty.org"
-                  },
+                  },                  
                   {
                   "name" : "Washington Heights",
                   "hotline" : "212-230-1000",
