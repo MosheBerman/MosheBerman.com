@@ -25,7 +25,7 @@ function loadBanners(){
 	//	Load the banners into an array
 	//
 	
-	var banners = [wedding, colors, zmanim, jms];
+	var banners = [zmanim, nippon, jms];
 
 	//
 	//	Precache some elements
