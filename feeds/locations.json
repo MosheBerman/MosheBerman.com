@@ -198,6 +198,12 @@
   "continent" : "North America"
   },
   {
+  "name" : "Monsey, New York, USA",
+  "longitude" : -74.0685,
+  "latitude" : 41.1112,
+  "continent" : "North America"
+  },
+  {
   "name" : "Montevideo, Uruguay",
   "longitude" : -56.181944,
   "latitude" : -34.883611,
