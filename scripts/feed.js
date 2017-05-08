@@ -1,40 +1,32 @@
 //
-//
+//	Load apps from the iTunes Search API.
 //
 
-function loadAppsFromURL(url){
+function loadApps(data) {
 
 	showLoadingIndicator("#loadingApps");
+	data = data["results"];
 
-	$.get(url, null ,function(data){
-		console.log("%c" + data, "color:red;");
+	for(var i = 0; i <data.length; i++){
+		
+		var item = data[i];
+		
+		if (item.kind === "mac-software")
+		{
+			continue;
+		}
 
-		data = $.parseJSON(data);
-		
-		var size = data.length;
-		
-		$.each(data["results"], function(){
-		
-			var item = $(this)[0];
-		
-			/* Set up the properties */	
-			
-			item.title = item.app_name;
-			item.link = item.app_link;
-			description = item.app_description;
-			item.image = item.app_image_link;
-			
- 	       	addItemToList(item, "#appList");
-			console.log(item);
-	       	
-		});
-		
-		removeLoadingIndicator("#loadingApps"); 	 			
-		
-		
-		console.log(data);
-	});
-	
+		/* Set up the properties */	
+		var app = new Object();
+		app.title = item.trackCensoredName;
+		app.link = item.trackViewUrl;
+		app.description = item.description;
+		app.image = item.artworkUrl512;
+
+		addItemToList(app, "#appList");
+	}
+
+	removeLoadingIndicator("#loadingApps"); 	 			
 }
 
 //
@@ -46,34 +38,34 @@ function loadFeedFromURL(rssurl){
 	var articles = {};
 	var articleID = 0;
 	
-		showLoadingIndicator("#loadingFeed");
+	showLoadingIndicator("#loadingFeed");
 	
 	$.get(rssurl, function(data) {
-	    
-	    var $xml = $(data);
-	    
-   	 	$xml.find("item").each(function() {
-    	    var $this = $(this),
-        	    item = {
-            	    title: $this.find("title").text(),
-                	link: $this.find("link").text(),
-                	description: $this.find("description").text(),
-	                pubDate: $this.find("pubdate").text(),
-    	            author: $this.find("creator").text()
-        		}
-        		
-            articles[articleID] = item;
-	        articleID++;	        
-	        
+
+		var $xml = $(data);
+
+		$xml.find("item").each(function() {
+			var $this = $(this),
+			item = {
+				title: $this.find("title").text(),
+				link: $this.find("link").text(),
+				description: $this.find("description").text(),
+				pubDate: $this.find("pubdate").text(),
+				author: $this.find("creator").text()
+			}
+
+			articles[articleID] = item;
+			articleID++;	        
+
 	        //
 	        //	Display the item
 	        //	
 	        
-	       	addItemToList(item, "#feedList");
+	        addItemToList(item, "#feedList");
 	        
-    	});
-    	
-    	removeLoadingIndicator("#loadingFeed"); 	
+	    });
+
+		removeLoadingIndicator("#loadingFeed"); 	
 	});
 }
 
@@ -86,17 +78,17 @@ function loadGitReposFromURL(url){
 	showLoadingIndicator("#loadingGit");
 
 	$.getJSON(url, null ,function(data){
-	
+
 		data = data.data;
 		
 		var size = data.length;
 		
 		$.each(data, function(){
-		
+
 			var item = $(this)[0];
 			
-	       	addItemToList(item, "#repoList");
-	       	
+			addItemToList(item, "#repoList");
+
 		});
 		
 		removeLoadingIndicator("#loadingGit"); 	 			
@@ -124,7 +116,7 @@ function addItemToList(item, list){
 	}
 	
 	if(title == "Bitachon.org" || (title == "Nippon" && list == "#repoList")){
-	 	return;
+		return;
 	}
 	
 	if(item["link"]){
@@ -144,7 +136,7 @@ function addItemToList(item, list){
 	}
 	
 	if(list == "#appList"){
-		$(list).append('<li class="row"><a href="'+link+'"><img class="icon" src="http://apps.mosheberman.com/images/'+image+'" /><span class="label">' + title + '</span></a></li>');
+		$(list).append('<li class="row"><a href="'+link+'"><img src="'+image+'" data-rjs="'+image+'" class="icon" /><span class="label">' + title + '</span></a></li>');
 	}else{
 		$(list).append('<li class="row"><a href="'+link+'"><span class="label">' + title + '</span></a></li>');
 	}
@@ -163,7 +155,7 @@ function removeLoadingIndicator(indicator){
     	$(indicator).fadeOut(200, function(){
     		$(indicator).css("display", "none");
     	});   
-}
+    }
 
 //
 //	Display a given loading indicator

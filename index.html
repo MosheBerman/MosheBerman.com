@@ -48,7 +48,6 @@
  			centerVertically();		
 			redirectIfReferrerIsBlogLink();
 			loadPhoto("https://secure.gravatar.com/avatar/57f5ee2e1627b45e923de962ab0b0eab");
-			loadAppsFromURL("https://itunes.apple.com/search?term=moshe+berman&entity=software");
 			loadFeedFromURL("https://blog.mosheberman.com/feed.json");
 			loadGitReposFromURL("https://api.github.com/users/mosheberman/repos?callback=?");
 			expandColumns();
@@ -136,7 +135,8 @@ ga('send', 'pageview');
 		</div>	
 	</div>
 
-	<script type="text/javascript" src="./scripts/retina.js"></script>	
+	<script type="text/javascript" src="./scripts/retina.js"></script>
+	<script type="text/javascript" src="https://itunes.apple.com/search?term=moshe+berman&entity=software,iPadSoftware,macSoftware&callback=loadApps"></script>	
 
 </body>
 </html>
