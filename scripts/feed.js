@@ -10,11 +10,6 @@ function loadApps(data) {
 	for(var i = 0; i <data.length; i++){
 		
 		var item = data[i];
-		
-		if (item.kind === "mac-software")
-		{
-			continue;
-		}
 
 		/* Set up the properties */	
 		var app = new Object();
@@ -22,6 +17,15 @@ function loadApps(data) {
 		app.link = item.trackViewUrl;
 		app.description = item.description;
 		app.image = item.artworkUrl512;
+
+		if (item.kind === "mac-software")
+		{
+			app.platform = "macOS";
+		}
+		else 
+		{
+			app.platform = "iOS";
+		}
 
 		addItemToList(app, "#appList");
 	}
@@ -136,11 +140,24 @@ function addItemToList(item, list){
 	}
 	
 	if(list == "#appList"){
-		$(list).append('<li class="row"><a href="'+link+'"><img src="'+image+'" data-rjs="'+image+'" class="icon" /><span class="label">' + title + '</span></a></li>');
+		$(list).append('<li class="row"><a href="'+link+'"><img src="'+image.replace("http:", "https:")+'" data-rjs="'+image+'" class="icon '+iconSelectorForPlatform(item['platform']) +'" /><span class="label">' + title + '</span></a></li>');
 	}else{
 		$(list).append('<li class="row"><a href="'+link+'"><span class="label">' + title + '</span></a></li>');
 	}
 	
+}
+
+//
+//
+//
+
+function iconSelectorForPlatform(platform){
+	if (platform === "macOS")
+	{
+		return "icon-macos";
+	}
+
+	return "icon-ios";
 }
 
 //

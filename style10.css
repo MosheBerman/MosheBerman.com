@@ -191,7 +191,7 @@
 			margin: 0;
 		}
 				
-		.singleGroupCell.photo
+		.singleGroupCell.icon
 		{
 			display: block;
 			float: left;
@@ -202,6 +202,11 @@
 			border-bottom-left-radius: inherit;			
 			padding: 0;
 			padding-right: 5px;
+		}
+
+		#appColumn .icon-macos
+		{
+			border: none !important;
 		}
 	
 		/**

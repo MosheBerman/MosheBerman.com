@@ -1,1 +1,1 @@
-var debug = false;
+var debug = true;
