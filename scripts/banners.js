@@ -203,6 +203,7 @@ function createTagForBanner(banner){
 	image.width = 960;
 	image.alt = banner.title;
 	image.className = "bannerImage";
+	image.setAttribute('data-rjs', 2); // For retina.js to know what our max image is
 
 	link.appendChild(image);
 	bannerTag.appendChild(link);
