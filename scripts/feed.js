@@ -16,7 +16,7 @@ function loadApps(data) {
 		app.title = item.trackCensoredName;
 		app.link = item.trackViewUrl;
 		app.description = item.description;
-		app.image = item.artworkUrl512;
+		// app.image = item.artworkUrl512;
 
 		if (item.kind === "mac-software")
 		{
@@ -26,6 +26,8 @@ function loadApps(data) {
 		{
 			app.platform = "iOS";
 		}
+
+		console.log(app)
 
 		addItemToList(app, "#appList");
 	}
@@ -140,7 +142,7 @@ function addItemToList(item, list){
 	}
 	
 	if(list == "#appList"){
-		$(list).append('<li class="row"><a href="'+link+'"><img src="'+image.replace("http:", "https:")+'" data-rjs="'+image+'" class="icon '+iconSelectorForPlatform(item['platform']) +'" /><span class="label">' + title + '</span></a></li>');
+		$(list).append('<li class="row"><a href="'+link+'"><img src="'+image+'" data-rjs="'+image+'" class="icon '+iconSelectorForPlatform(item['platform']) +'" /><span class="label">' + title + '</span></a></li>');
 	}else{
 		$(list).append('<li class="row"><a href="'+link+'"><span class="label">' + title + '</span></a></li>');
 	}
