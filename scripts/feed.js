@@ -7,12 +7,13 @@ function loadAppsFromURL(url){
 	showLoadingIndicator("#loadingApps");
 
 	$.get(url, null ,function(data){
-				
+		console.log("%c" + data, "color:red;");
+
 		data = $.parseJSON(data);
 		
 		var size = data.length;
 		
-		$.each(data, function(){
+		$.each(data["results"], function(){
 		
 			var item = $(this)[0];
 		
