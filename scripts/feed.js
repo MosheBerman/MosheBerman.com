@@ -10,13 +10,15 @@ function loadApps(data) {
 	for(var i = 0; i <data.length; i++){
 		
 		var item = data[i];
+		
+		console.log(item);
 
 		/* Set up the properties */	
 		var app = new Object();
 		app.title = item.trackCensoredName;
 		app.link = item.trackViewUrl;
 		app.description = item.description;
-		app.image = item.artworkUrl512;
+		app.bundleId = item.bundleId;
 
 		if (item.kind === "mac-software")
 		{
@@ -123,8 +125,12 @@ function addItemToList(item, list){
 	//	Add a link to the list of links
 	//
 
-	if(item['image']){
-		image = item['image'];
+	if(item['bundleId']){
+		image = "https://mosheberman.com/images/icons/" + item['bundleId'] + ".jpg";
+	}
+	else 
+	{
+		image = "https://mosheberman.com/images/icons/icon.png";	
 	}
 	
 	if(list == "#appList")
