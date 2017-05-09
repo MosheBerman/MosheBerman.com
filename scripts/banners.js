@@ -14,18 +14,16 @@ function Banner(href, src, title){
 
 function loadBanners(){
 	
-	var omer = Banner("http://itunes.com/apps/sefira", "./images/banners/apps/ultimateomer.png", "Ultimate Omer");
-	var zmanim = Banner("http://itunes.com/apps/zmanim", "./images/banners/apps/ZmanimWebsite.png", "Ultimate Zmanim");	
-	var nippon = Banner("http://itunes.com/apps/nippon", "./images/banners/apps/nippon.png", "Nippon");	
-	var colors = Banner("http://appstore.com/mosheberman", "./images/banners/apps/Colors.png", "Colors");
-	var jms = Banner("https://itunes.apple.com/us/app/jewishmusic-stream/id376238913?mt=8", "./images/banners/apps/jms.png", "Jewish MusicStream");
-	var wedding = Banner("http://mosheberman.com/wedding", "./images/banners/personal/WeddingWebsite.png", "Our Wedding")
+	var omer = Banner("https://itunes.apple.com/us/app/ultimate-omer-2-the-sefira-app-you-can-count-on/id366802811?mt=8", "./images/banners/apps/ultimateomer.png", "Ultimate Omer");
+	var zmanim = Banner("https://itunes.apple.com/us/app/ultimate-zmanim/id452921604?mt=8", "./images/banners/apps/ZmanimWebsite.png", "Ultimate Zmanim");		
+	var colors = Banner("https://appstore.com/mosheberman", "./images/banners/apps/Colors.png", "Colors");
+	var gabbai = Banner("https://itunes.apple.com/us/app/gabbai-synagogue-display/id568239297?mt=8", "./images/banners/apps/gabbai.png", "Gabbai");
 
 	//
 	//	Load the banners into an array
 	//
 	
-	var banners = [zmanim, nippon, jms];
+	var banners = [zmanim, colors, gabbai];
 
 	//
 	//	Precache some elements
