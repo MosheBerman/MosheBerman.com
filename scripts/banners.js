@@ -15,15 +15,14 @@ function Banner(href, src, title){
 function loadBanners(){
 	
 	var omer = Banner("https://itunes.apple.com/us/app/ultimate-omer-2-the-sefira-app-you-can-count-on/id366802811?mt=8", "./images/banners/apps/ultimateomer.png", "Ultimate Omer");
-	var zmanim = Banner("https://itunes.apple.com/us/app/ultimate-zmanim/id452921604?mt=8", "./images/banners/apps/ZmanimWebsite.png", "Ultimate Zmanim");		
-	var colors = Banner("https://appstore.com/mosheberman", "./images/banners/apps/Colors.png", "Colors");
+	var zmanim = Banner("https://itunes.apple.com/us/app/ultimate-zmanim/id452921604?mt=8", "./images/banners/apps/ZmanimColor.png", "Ultimate Zmanim");		
 	var gabbai = Banner("https://itunes.apple.com/us/app/gabbai-synagogue-display/id568239297?mt=8", "./images/banners/apps/gabbai.png", "Gabbai");
 
 	//
 	//	Load the banners into an array
 	//
 	
-	var banners = [colors, zmanim, omer, gabbai];
+	var banners = [zmanim, omer, gabbai];
 
 	//
 	//	Precache some elements
