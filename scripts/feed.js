@@ -19,6 +19,7 @@ function loadApps(data) {
 		app.link = item.trackViewUrl;
 		app.description = item.description;
 		app.bundleId = item.bundleId;
+		app.suffix = fileExtensionFromUrl(item.artworkUrl512)
 
 		if (item.kind === "mac-software")
 		{
@@ -126,7 +127,7 @@ function addItemToList(item, list){
 	//
 
 	if(item['bundleId']){
-		image = "https://mosheberman.com/images/icons/" + item['bundleId'] + ".jpg";
+		image = "https://mosheberman.com/images/icons/" + item['bundleId'] + "." + item["suffix"];
 	}
 	else 
 	{
@@ -141,7 +142,15 @@ function addItemToList(item, list){
 	{
 		$(list).append('<li class="row"><a href="'+link+'"><span class="label">' + title + '</span></a></li>');
 	}
-	
+}
+
+//
+//
+//
+
+function fileExtensionFromUrl(url) {
+	var components = url.split(".");
+	return components[components.length - 1];
 }
 
 //
