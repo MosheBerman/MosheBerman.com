@@ -23,7 +23,7 @@ function loadBanners(){
 	//	Load the banners into an array
 	//
 	
-	var banners = [zmanim, colors, gabbai];
+	var banners = [colors, zmanim, omer, gabbai];
 
 	//
 	//	Precache some elements
