@@ -16,7 +16,7 @@ function loadApps(data) {
 		app.title = item.trackCensoredName;
 		app.link = item.trackViewUrl;
 		app.description = item.description;
-		// app.image = item.artworkUrl512;
+		app.image = item.artworkUrl512;
 
 		if (item.kind === "mac-software")
 		{
@@ -39,40 +39,22 @@ function loadApps(data) {
 //	Load the blog feed and parse it into the list view
 //
 
-function loadFeedFromURL(rssurl){
+function loadBlog(posts){
 
-	var articles = {};
-	var articleID = 0;
-	
 	showLoadingIndicator("#loadingFeed");
-	
-	$.get(rssurl, function(data) {
 
-		var $xml = $(data);
+	for (var i = posts.length - 1; i >= 0; i--) {
+		var item = posts[i]
 
-		$xml.find("item").each(function() {
-			var $this = $(this),
-			item = {
-				title: $this.find("title").text(),
-				link: $this.find("link").text(),
-				description: $this.find("description").text(),
-				pubDate: $this.find("pubdate").text(),
-				author: $this.find("creator").text()
-			}
+		var post = new Object();
+		post.title = item.title;
+		post.tags = item.tags;
+		post.slug = item.url;
 
-			articles[articleID] = item;
-			articleID++;	        
+		addItemToList(post, "#feedList");
+	};
 
-	        //
-	        //	Display the item
-	        //	
-	        
-	        addItemToList(item, "#feedList");
-	        
-	    });
-
-		removeLoadingIndicator("#loadingFeed"); 	
-	});
+	removeLoadingIndicator("#loadingFeed"); 
 }
 
 //
@@ -117,7 +99,7 @@ function addItemToList(item, list){
 	
 	//Otherwise, check for a name property
 	
-	if(item["name"]){
+	else if(item["name"]){
 		title = item["name"].trim();
 	}
 	
@@ -127,6 +109,10 @@ function addItemToList(item, list){
 	
 	if(item["link"]){
 		link = item["link"];
+	}
+	else if (item["slug"])
+	{
+		link = "https://blog.mosheberman.com" + item["slug"];
 	}
 	
 	if(item["html_url"]){
@@ -141,9 +127,12 @@ function addItemToList(item, list){
 		image = item['image'];
 	}
 	
-	if(list == "#appList"){
+	if(list == "#appList")
+	{
 		$(list).append('<li class="row"><a href="'+link+'"><img src="'+image+'" data-rjs="'+image+'" class="icon '+iconSelectorForPlatform(item['platform']) +'" /><span class="label">' + title + '</span></a></li>');
-	}else{
+	}
+	else 
+	{
 		$(list).append('<li class="row"><a href="'+link+'"><span class="label">' + title + '</span></a></li>');
 	}
 	
