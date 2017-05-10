@@ -11,7 +11,7 @@ function loadApps(data) {
 		
 		var item = data[i];
 		
-		console.log(item);
+		// console.log(item);
 
 		/* Set up the properties */	
 		var app = new Object();
@@ -30,7 +30,7 @@ function loadApps(data) {
 			app.platform = "iOS";
 		}
 
-		console.log(app)
+		// console.log(app)
 
 		addItemToList(app, "#appList");
 	}
