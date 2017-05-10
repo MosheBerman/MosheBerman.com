@@ -10,7 +10,8 @@
 
 	<style>
 
-		@import "style10.css"; 
+		@import "style10.css" screen and (min-width: 769px);
+		@import "style10-mobile.css" screen and (max-width: 768px); 
 
 	</style>
 	
@@ -35,6 +36,7 @@
 	<!-- jQuery first, then alphabetical -->
 
 	<script type="text/javascript" src="./scripts/jquery172.js"></script>
+	<script type="text/javascript" src="./scripts/layout.js"></script>	
 	<script type="text/javascript" src="./scripts/center.js"></script>	
 	<script type="text/javascript" src="./scripts/feed.js"></script>
 	<script type="text/javascript" src="./scripts/redirect.js"></script>	
@@ -45,11 +47,11 @@
 		$(document).ready(
 		function(){
 				
- 			centerVertically();		
+ 			if (!isSmallScreen) { centerVertically(); }
 			redirectIfReferrerIsBlogLink();
 			loadPhoto("https://secure.gravatar.com/avatar/57f5ee2e1627b45e923de962ab0b0eab");
 			loadGitReposFromURL("https://api.github.com/users/mosheberman/repos?callback=?");
-			expandColumns();
+			if (!isSmallScreen) { expandColumns(); }
 			loadBanners();
 			configureBannerSelect();
 			
@@ -58,6 +60,9 @@
 
 			scrollBanner();
 			retinajs();
+
+			window.addEventListener('resize', function(){ handleLayout(); }, false);
+			window.addEventListener('orientationchange', function(){handleLayout(); }, false);
 		});
 	</script>
 
@@ -95,23 +100,28 @@
 		
 		<!-- Center Columns -->
 		<div id="columnsWrapper">
-			<div class="navbar">
+			<div class="navbar mobile navbarMobile">
+				<div class="navbarTitle">Moshe Berman</div>
+			</div>
+			<div class="navbar desktop">
 				<a href="https://itunes.apple.com/us/developer/moshe-berman/id362306433">Apps</a>
 			</div>		
-			<div class="navbar middle">
+			<div class="navbar desktop middle">
 				<a href="http://blog.mosheberman.com">Blog</a>
 			</div>	
-			<div class="navbar">
+			<div class="navbar desktop">
 				<a href="http://github.com/MosheBerman">Code</a>
 			</div>									
 			<div class="column" id="appColumn">
+				<div class="mobile tableViewSectionHeaderView">Apps</div>
 				<span class="loading" id="loadingApps">Loading...</span>			
 				<ul id="appList" class="tableView">
 				
 				</ul>				
 			</div>
 			<div class="column" id="feedColumn">
-				<!-- Pull blog RSS feed here -->		
+				<!-- Pull blog RSS feed here -->
+				<div class="mobile tableViewSectionHeaderView">Blog</div>		
 				<span class="loading" id="loadingFeed">Loading...</span>
 				<ul id="feedList" class="tableView">
 				
@@ -119,6 +129,7 @@
 			</div>
 			<div class="column" id="gitColumn">
 				<!-- GitHub links to go here -->		
+				<div class="mobile tableViewSectionHeaderView">Code</div>
 				<span class="loading" id="loadingGit">Loading...</span>			
 				<ul id="repoList" class="tableView">
 				
