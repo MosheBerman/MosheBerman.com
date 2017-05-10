@@ -86,7 +86,7 @@ function loadBanners(){
 	//	Resize the banner scroller
 	//
 
-	var bannerViewportWidth = $("#innerBanner").width();
+	var bannerViewportWidth = $("#bannerWrapper").width();
 	var size = String(countTheKids(bannerContainer) * bannerViewportWidth) + "px";
 	$(bannerContainer).css("width", size);
 	$(bannerContainer.parent).css("height", "200px");
@@ -108,8 +108,8 @@ function scrollBanner()
 		var wrapper = $("#bannerWrapper");
 		
 		var left = parseInt(banner.css("margin-left"));
-		var wrapperWidth = parseInt($("#bannerWrapper").width);
-		var bannerWidth = parseInt($("#innerBanner").width);
+		var wrapperWidth = parseInt(wrapper.css("width"));
+		var bannerWidth = parseInt(banner.css("width"));
 		
 		//
 		//	Calculate the new position and reset to the first slide if necessary
