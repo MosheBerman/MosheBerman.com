@@ -86,7 +86,8 @@ function loadBanners(){
 	//	Resize the banner scroller
 	//
 
-	var size = String(countTheKids(bannerContainer) * 960) + "px";
+	var bannerViewportWidth = $("#innerBanner").width();
+	var size = String(countTheKids(bannerContainer) * bannerViewportWidth) + "px";
 	$(bannerContainer).css("width", size);
 	$(bannerContainer.parent).css("height", "200px");
 }
@@ -123,12 +124,12 @@ function scrollBanner()
 		/*  */
 		
 		var index = (-newLeft)/wrapperWidth;
-			
+
 		scrollToIndex(index);
-	
+
 		clearTimeout(bannerTimer);	
 		scrollBanner();	
-			
+
 	}, 5000);
 }
 
@@ -138,13 +139,13 @@ function scrollBanner()
 
 function  scrollToIndex(index){
 
-		var banner = $("#innerBanner");
-		var wrapper = $("#bannerWrapper");
-		
-		var left = parseInt(banner.css("margin-left"));
-		var wrapperWidth = parseInt(wrapper.css("width"));
-		var bannerWidth = parseInt(banner.css("width"));
-		
+	var banner = $("#innerBanner");
+	var wrapper = $("#bannerWrapper");
+
+	var left = parseInt(banner.css("margin-left"));
+	var wrapperWidth = parseInt(wrapper.css("width"));
+	var bannerWidth = parseInt(banner.css("width"));
+
 		//
 		//	Calculate the new position and reset to the first slide if necessary
 		//
@@ -156,7 +157,7 @@ function  scrollToIndex(index){
 		//
 		
 		banner.animate({'margin-left': newLeft}, 300, function(){
-		
+
 			//
 			//	Select the correct dot
 			//
@@ -167,7 +168,7 @@ function  scrollToIndex(index){
 			
 			dots.eq(index).addClass('selectedDot');	
 		});	
-}
+	}
 
 //
 //
@@ -194,10 +195,12 @@ function createTagForBanner(banner){
 	link.href = banner.href;
 	link.className = "bannerLink";
 
+	var bannerViewportWidth = $("#bannerWrapper").width();
+
 	var image = document.createElement("img");
-	image.src = banner.src;
+	image.src = bannerURLFromBanner(banner);
 	image.height = 200;
-	image.width = 960;
+	image.width = bannerViewportWidth;
 	image.alt = banner.title;
 	image.className = "bannerImage";
 	image.setAttribute('data-rjs', 2); // For retina.js to know what our max image is
@@ -225,15 +228,42 @@ function dotElement() {
  *
  *	Apparently the DOM is funny about whitespace.
  */
-function countTheKids(parent){
-	var realKids = 0;
-	var kids = parent.childNodes.length;
-	var i = 0;
-	while(i < kids){
-		if(parent.childNodes[i].nodeType != 3){
-			realKids++;
-		}
-		i++;
+ function countTheKids(parent){
+ 	var realKids = 0;
+ 	var kids = parent.childNodes.length;
+ 	var i = 0;
+ 	while(i < kids){
+ 		if(parent.childNodes[i].nodeType != 3){
+ 			realKids++;
+ 		}
+ 		i++;
+ 	}
+ 	return realKids;
+ }
+
+/**
+*
+*/
+
+function bannerURLFromBanner(banner) 
+{
+	var bannerURL = banner.src;
+
+	if (isSmallScreen === true)
+	{
+		// bannerURL = mobileURLFromBanner(banner);
 	}
-	return realKids;
+
+	return bannerURL;
+}
+
+function mobileURLFromBanner(banner) 
+{
+	var modifier = isPortrait ? "portrait" : "landscape";
+	modifier = "-"+modifier+".";
+	var components = banner.src.split(".");
+	var index = components.length - 1;
+	components.splice(index, 0, modifier);
+	components.splice(0, 0, ".");
+	return components.join("");
 }
