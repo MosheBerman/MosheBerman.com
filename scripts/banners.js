@@ -108,8 +108,8 @@ function scrollBanner()
 		var wrapper = $("#bannerWrapper");
 		
 		var left = parseInt(banner.css("margin-left"));
-		var wrapperWidth = parseInt(wrapper.css("width"));
-		var bannerWidth = parseInt(banner.css("width"));
+		var wrapperWidth = parseInt($("#bannerWrapper").width);
+		var bannerWidth = parseInt($("#innerBanner").width);
 		
 		//
 		//	Calculate the new position and reset to the first slide if necessary
