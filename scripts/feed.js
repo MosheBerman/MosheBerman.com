@@ -1,79 +1,63 @@
 //
-//
+//	Load apps from the iTunes Search API.
 //
 
-function loadAppsFromURL(url){
+function loadApps(data) {
 
 	showLoadingIndicator("#loadingApps");
+	data = data["results"];
 
-	$.get(url, null ,function(data){
-				
-		data = $.parseJSON(data);
+	for(var i = 0; i <data.length; i++){
 		
-		var size = data.length;
+		var item = data[i];
 		
-		$.each(data, function(){
-		
-			var item = $(this)[0];
-		
-			/* Set up the properties */	
-			
-			item.title = item.app_name;
-			item.link = item.app_link;
-			description = item.app_description;
-			item.image = item.app_image_link;
-			
- 	       	addItemToList(item, "#appList");
-			console.log(item);
-	       	
-		});
-		
-		removeLoadingIndicator("#loadingApps"); 	 			
-		
-		
-		console.log(data);
-	});
-	
+		// console.log(item);
+
+		/* Set up the properties */	
+		var app = new Object();
+		app.title = item.trackCensoredName;
+		app.link = item.trackViewUrl;
+		app.description = item.description;
+		app.bundleId = item.bundleId;
+		app.suffix = fileExtensionFromUrl(item.artworkUrl512)
+
+		if (item.kind === "mac-software")
+		{
+			app.platform = "macOS";
+		}
+		else 
+		{
+			app.platform = "iOS";
+		}
+
+		// console.log(app)
+
+		addItemToList(app, "#appList");
+	}
+
+	removeLoadingIndicator("#loadingApps"); 	 			
 }
 
 //
 //	Load the blog feed and parse it into the list view
 //
 
-function loadFeedFromURL(rssurl){
+function loadBlog(posts){
 
-	var articles = {};
-	var articleID = 0;
-	
-		showLoadingIndicator("#loadingFeed");
-	
-	$.get(rssurl, function(data) {
-	    
-	    var $xml = $(data);
-	    
-   	 	$xml.find("item").each(function() {
-    	    var $this = $(this),
-        	    item = {
-            	    title: $this.find("title").text(),
-                	link: $this.find("link").text(),
-                	description: $this.find("description").text(),
-	                pubDate: $this.find("pubdate").text(),
-    	            author: $this.find("creator").text()
-        		}
-        		
-            articles[articleID] = item;
-	        articleID++;	        
-	        
-	        //
-	        //	Display the item
-	        //	
-	        
-	       	addItemToList(item, "#feedList");
-	        
-    	});
-    	
-    	removeLoadingIndicator("#loadingFeed"); 	
-	});
+	showLoadingIndicator("#loadingFeed");
+
+	for (var i = posts.length - 1; i >= 0; i--) {
+		var item = posts[i]
+
+		var post = new Object();
+		post.title = item.title;
+		post.tags = item.tags;
+		post.slug = item.url;
+
+		addItemToList(post, "#feedList");
+	};
+
+	removeLoadingIndicator("#loadingFeed"); 
 }
 
 //
@@ -85,17 +69,17 @@ function loadGitReposFromURL(url){
 	showLoadingIndicator("#loadingGit");
 
 	$.getJSON(url, null ,function(data){
-	
+
 		data = data.data;
 		
 		var size = data.length;
 		
 		$.each(data, function(){
-		
+
 			var item = $(this)[0];
 			
-	       	addItemToList(item, "#repoList");
-	       	
+			addItemToList(item, "#repoList");
+
 		});
 		
 		removeLoadingIndicator("#loadingGit"); 	 			
@@ -118,16 +102,20 @@ function addItemToList(item, list){
 	
 	//Otherwise, check for a name property
 	
-	if(item["name"]){
+	else if(item["name"]){
 		title = item["name"].trim();
 	}
 	
 	if(title == "Bitachon.org" || (title == "Nippon" && list == "#repoList")){
-	 	return;
+		return;
 	}
 	
 	if(item["link"]){
 		link = item["link"];
+	}
+	else if (item["slug"])
+	{
+		link = "https://blog.mosheberman.com" + item["slug"];
 	}
 	
 	if(item["html_url"]){
@@ -138,16 +126,44 @@ function addItemToList(item, list){
 	//	Add a link to the list of links
 	//
 
-	if(item['image']){
-		image = item['image'];
+	if(item['bundleId']){
+		image = "https://mosheberman.com/images/icons/" + item['bundleId'] + "." + item["suffix"];
+	}
+	else 
+	{
+		image = "https://mosheberman.com/images/icons/icon.png";	
 	}
 	
-	if(list == "#appList"){
-		$(list).append('<li class="row"><a href="'+link+'"><img class="icon" src="http://apps.mosheberman.com/images/'+image+'" /><span class="label">' + title + '</span></a></li>');
-	}else{
+	if(list == "#appList")
+	{
+		$(list).append('<li class="row"><a href="'+link+'"><img src="'+image+'" data-rjs="'+image+'" class="icon '+iconSelectorForPlatform(item['platform']) +'" /><span class="label">' + title + '</span></a></li>');
+	}
+	else 
+	{
 		$(list).append('<li class="row"><a href="'+link+'"><span class="label">' + title + '</span></a></li>');
 	}
-	
+}
+
+//
+//
+//
+
+function fileExtensionFromUrl(url) {
+	var components = url.split(".");
+	return components[components.length - 1];
+}
+
+//
+//
+//
+
+function iconSelectorForPlatform(platform){
+	if (platform === "macOS")
+	{
+		return "icon-macos";
+	}
+
+	return "icon-ios";
 }
 
 //
@@ -162,7 +178,7 @@ function removeLoadingIndicator(indicator){
     	$(indicator).fadeOut(200, function(){
     		$(indicator).css("display", "none");
     	});   
-}
+    }
 
 //
 //	Display a given loading indicator

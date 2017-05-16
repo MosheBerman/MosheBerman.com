@@ -14,18 +14,15 @@ function Banner(href, src, title){
 
 function loadBanners(){
 	
-	var omer = Banner("http://itunes.com/apps/sefira", "./images/banners/apps/ultimateomer.png", "Ultimate Omer");
-	var zmanim = Banner("http://itunes.com/apps/zmanim", "./images/banners/apps/ZmanimWebsite.png", "Ultimate Zmanim");	
-	var nippon = Banner("http://itunes.com/apps/nippon", "./images/banners/apps/nippon.png", "Nippon");	
-	var colors = Banner("http://appstore.com/mosheberman", "./images/banners/apps/Colors.png", "Colors");
-	var jms = Banner("https://itunes.apple.com/us/app/jewishmusic-stream/id376238913?mt=8", "./images/banners/apps/jms.png", "Jewish MusicStream");
-	var wedding = Banner("http://mosheberman.com/wedding", "./images/banners/personal/WeddingWebsite.png", "Our Wedding")
+	var omer = Banner("https://itunes.apple.com/us/app/ultimate-omer-2-the-sefira-app-you-can-count-on/id366802811?mt=8", "./images/banners/apps/ultimateomer.png", "Ultimate Omer");
+	var zmanim = Banner("https://itunes.apple.com/us/app/ultimate-zmanim/id452921604?mt=8", "./images/banners/apps/ZmanimColor.png", "Ultimate Zmanim");		
+	var gabbai = Banner("https://itunes.apple.com/us/app/gabbai-synagogue-display/id568239297?mt=8", "./images/banners/apps/gabbai.png", "Gabbai");
 
 	//
 	//	Load the banners into an array
 	//
 	
-	var banners = [zmanim, nippon, jms];
+	var banners = [zmanim, omer, gabbai];
 
 	//
 	//	Precache some elements
@@ -89,7 +86,8 @@ function loadBanners(){
 	//	Resize the banner scroller
 	//
 
-	var size = String(countTheKids(bannerContainer) * 960) + "px";
+	var bannerViewportWidth = $("#bannerWrapper").width();
+	var size = String(countTheKids(bannerContainer) * bannerViewportWidth) + "px";
 	$(bannerContainer).css("width", size);
 	$(bannerContainer.parent).css("height", "200px");
 }
@@ -126,12 +124,12 @@ function scrollBanner()
 		/*  */
 		
 		var index = (-newLeft)/wrapperWidth;
-			
+
 		scrollToIndex(index);
-	
+
 		clearTimeout(bannerTimer);	
 		scrollBanner();	
-			
+
 	}, 5000);
 }
 
@@ -141,13 +139,13 @@ function scrollBanner()
 
 function  scrollToIndex(index){
 
-		var banner = $("#innerBanner");
-		var wrapper = $("#bannerWrapper");
-		
-		var left = parseInt(banner.css("margin-left"));
-		var wrapperWidth = parseInt(wrapper.css("width"));
-		var bannerWidth = parseInt(banner.css("width"));
-		
+	var banner = $("#innerBanner");
+	var wrapper = $("#bannerWrapper");
+
+	var left = parseInt(banner.css("margin-left"));
+	var wrapperWidth = parseInt(wrapper.css("width"));
+	var bannerWidth = parseInt(banner.css("width"));
+
 		//
 		//	Calculate the new position and reset to the first slide if necessary
 		//
@@ -159,7 +157,7 @@ function  scrollToIndex(index){
 		//
 		
 		banner.animate({'margin-left': newLeft}, 300, function(){
-		
+
 			//
 			//	Select the correct dot
 			//
@@ -170,7 +168,7 @@ function  scrollToIndex(index){
 			
 			dots.eq(index).addClass('selectedDot');	
 		});	
-}
+	}
 
 //
 //
@@ -197,12 +195,15 @@ function createTagForBanner(banner){
 	link.href = banner.href;
 	link.className = "bannerLink";
 
+	var bannerViewportWidth = $("#bannerWrapper").width();
+
 	var image = document.createElement("img");
-	image.src = banner.src;
+	image.src = bannerURLFromBanner(banner);
 	image.height = 200;
-	image.width = 960;
+	image.width = bannerViewportWidth;
 	image.alt = banner.title;
 	image.className = "bannerImage";
+	image.setAttribute('data-rjs', 2); // For retina.js to know what our max image is
 
 	link.appendChild(image);
 	bannerTag.appendChild(link);
@@ -227,15 +228,42 @@ function dotElement() {
  *
  *	Apparently the DOM is funny about whitespace.
  */
-function countTheKids(parent){
-	var realKids = 0;
-	var kids = parent.childNodes.length;
-	var i = 0;
-	while(i < kids){
-		if(parent.childNodes[i].nodeType != 3){
-			realKids++;
-		}
-		i++;
+ function countTheKids(parent){
+ 	var realKids = 0;
+ 	var kids = parent.childNodes.length;
+ 	var i = 0;
+ 	while(i < kids){
+ 		if(parent.childNodes[i].nodeType != 3){
+ 			realKids++;
+ 		}
+ 		i++;
+ 	}
+ 	return realKids;
+ }
+
+/**
+*
+*/
+
+function bannerURLFromBanner(banner) 
+{
+	var bannerURL = banner.src;
+
+	if (isSmallScreen === true)
+	{
+		// bannerURL = mobileURLFromBanner(banner);
 	}
-	return realKids;
+
+	return bannerURL;
+}
+
+function mobileURLFromBanner(banner) 
+{
+	var modifier = isPortrait ? "portrait" : "landscape";
+	modifier = "-"+modifier+".";
+	var components = banner.src.split(".");
+	var index = components.length - 1;
+	components.splice(index, 0, modifier);
+	components.splice(0, 0, ".");
+	return components.join("");
 }
