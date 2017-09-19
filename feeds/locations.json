@@ -18,6 +18,12 @@
   "continent" : "North America"
   },
   {
+  "name" : "Austin, Texas, USA",
+  "latitude" : 30.267153,
+  "longitude" : -97.743061,
+  "continent" : "North America"
+  },
+  {
   "name" : "Baltimore, Maryland, USA",
   "longitude" : -76.612189,
   "latitude" : 39.290385,
@@ -363,6 +369,12 @@
   "name" : "Williamsburg, Virginia, USA",
   "longitude" : -76.70745700000001,
   "latitude" : 37.270702,
+  "continent" : "North America"
+  },
+  {
+  "name" : "Waterbury, Connecticut, USA",
+  "longitude" : -73.051496,
+  "latitude" : 41.558152,
   "continent" : "North America"
   },
   {
