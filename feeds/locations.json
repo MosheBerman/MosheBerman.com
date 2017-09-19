@@ -1,5 +1,17 @@
  [
   {
+  "name" : "Amsterdam, Netherlands",
+  "latitude" : 52.379189,
+  "longitude" : 4.899431,
+  "continent" : "Europe"
+  },
+  {
+  "name" : "Antwerp, Belgium",
+  "latitude" : 51.260197,
+  "longitude" : 4.402771,
+  "continent" : "Europe"
+  },
+  {
   "name" : "Atlanta, Georgia, USA",
   "longitude" : -84.38798199999999,
   "latitude" : 33.748995,
@@ -126,7 +138,7 @@
   "continent" : "North America"
   },
   {
-  "name" : "Kiev, Lithuania",
+  "name" : "Kiev, Ukraine",
   "longitude" : 30.5233333,
   "latitude" : 50.45,
   "continent" : "Europe"
