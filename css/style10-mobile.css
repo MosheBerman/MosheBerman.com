@@ -1,12 +1,12 @@
 /**
  *	This is the iOS 10 version of my website.
  *
- *	Semitransparent content: 
+ *	Semitransparent content:
  *		- http://stackoverflow.com/questions/806000/transparent-background-but-not-the-content-text-images-inside-it-in-css-on
  *		- http://www.css3.info/opacity_rgba_and_compromise/
  *
  *	Blurred background:
- *		- http://stackoverflow.com/questions/20039765/css-how-to-apply-a-css3-blur-filter-to-a-background-image-that-i-am-setting-wit 
+ *		- http://stackoverflow.com/questions/20039765/css-how-to-apply-a-css3-blur-filter-to-a-background-image-that-i-am-setting-wit
  *		- http://codepen.io/aniketpant/pen/DsEve
  */
 
@@ -24,13 +24,13 @@
 			-khtml-user-select: none;
 			-moz-user-select: none;
 			-ms-user-select: none;
-			user-select: none; 		
-			font-family: "HelveticaNeue-Light", "Helvetica", sans-serif;	
+			user-select: none;
+			font-family: "HelveticaNeue-Light", "Helvetica", sans-serif;
 			/* background-image: url("./images/wallpapers/nyc.jpg");*/
 			background-position:50% 50%;  /* Sets reference point to scale from */
-			background-size:cover; 
+			background-size:cover;
 		}
-		
+
 		#outerWrapper
 		{
 			width: 100%;
@@ -41,7 +41,7 @@
 			overflow: hidden;
 		}
 
-		.fixed 
+		.fixed
 		{
 		    background-repeat: no-repeat;
 		    background-attachment: fixed;
@@ -49,22 +49,22 @@
 		    position: relative;
 		    z-index: 101;
 		}
-		
+
 		/* Banner */
-		
+
 		#bannerWrapper
 		{
 			display: none;
 			height: 200px;
-			margin: 0;	
-			padding:0;		
+			margin: 0;
+			padding:0;
 			width: 100%;
 			float: left;
 			border-bottom: 1px solid #000;
 			overflow: hidden;
 		}
-		
-		#bannerWrapper img 
+
+		#bannerWrapper img
 		{
 		   max-width: 100%;
     		max-height: 100%;
@@ -79,27 +79,27 @@
 			padding: 0;
 			width:100%;
 		}
-		
+
 		.banner
 		{
-			display: block;		
-			float: left;			
+			display: block;
+			float: left;
 			height: 200px;
 			width: 100%;
 			background-color: #ddddff;
 		}
-		
+
 		.banner a
 		{
 			display: block;
-			float: left;		
+			float: left;
 			width: 100%;
 			height: 200px;
 			margin: 0;
 			padding: 0;
 			font-size: 0;
 		}
-		
+
 		#bannerControls
 		{
 			display: none;
@@ -110,7 +110,7 @@
 			margin-top:-25px;
 			width:100%;
 		}
-		
+
 		#buttonWrapper
 		{
 			display: block;
@@ -120,7 +120,7 @@
 			margin-right: auto;
 			margin-top: 5px;
 		}
-		
+
 		.dot
 		{
 			display: block;
@@ -135,27 +135,27 @@
 			-webkit-opacity: 0.5;
 			opacity: 0.5;
 		}
-		
+
 		.selectedDot
 		{
 			-moz-opacity: 1.0;
 			-webkit-opacity: 1.0;
-			opacity: 1.0;					
+			opacity: 1.0;
 		}
-		
+
 		/* Three columns */
-		
+
 		#columnsWrapper
 		{
 			display: block;
-			margin: 0;	
-			padding: 0;		
+			margin: 0;
+			padding: 0;
 			width: 100%;
 			float: left;
 			padding-top: 44px;
-			padding-bottom: 44px;			
+			padding-bottom: 44px;
 		}
-		
+
 		.column
 		{
 			width: 100%;
@@ -163,19 +163,19 @@
 			overflow: auto;
 			padding: 0;
 			background-color: #c4ccd5;
-			background-size: 10px;		
-			z-index: 0;		
+			background-size: 10px;
+			z-index: 0;
 		}
-		
+
 		/* Set up the feed column to show borders*/
-		
+
 		div#feedColumn, div.middle
 		{
 			width: 100%;
 		}
-			
+
 		/* Height should match the dimensions of the photo */
-		
+
 		#appColumn .singleGroupCell
 		{
 			border-radius: 8px;
@@ -189,18 +189,18 @@
 			font-size: 12px;
 		}
 
-		#gitColumn 
+		#gitColumn
 		{
 			margin-bottom: -44px;
 			padding-bottom: 44px;
 		}
-		
+
 		.singleGroupCell p
 		{
 			padding: 2px;
 			margin: 0;
 		}
-				
+
 		.singleGroupCell.icon
 		{
 			display: block;
@@ -209,7 +209,7 @@
 			height: inherit;
 			width: 72px;
 			border-top-left-radius: inherit;
-			border-bottom-left-radius: inherit;			
+			border-bottom-left-radius: inherit;
 			padding: 0;
 			padding-right: 5px;
 		}
@@ -218,7 +218,7 @@
 		{
 			border: none !important;
 		}
-	
+
 		/**
 		 *	The navbars
 		 */
@@ -232,7 +232,7 @@
 			color: #fff;
 			line-height: 44px;
 			border-bottom: 1px solid #222;
-			background: rgba(255,255,255,0.95); /* based on http://ilee.co.uk/ios7-navigation-bar-using-css/ */
+			background: rgba(255,255,255,0.98); /* based on http://ilee.co.uk/ios7-navigation-bar-using-css/ */
 			z-index: 99;
 			position: relative;
 			margin: 0;
@@ -259,12 +259,16 @@
 
 		.navbar a
 		{
+			border: 1px solid #007aff;
+		}
+
+		.navbar a, .footer a
+		{
 			text-decoration: none;
 			color: #007aff;
 			padding: 5px 7px;
-			border-radius: 5px;			
-			border: 1px solid #007aff;
-			font-family: "HelveticaNeue-Light", "Helvetica", sans-serif;	
+			border-radius: 5px;
+			font-family: "HelveticaNeue-Light", "Helvetica", sans-serif;
 			z-index: 99;
 		}
 
@@ -274,16 +278,16 @@
 		}
 
 		/* The blog and github feeds */
-		
+
 		.loading
 		{
 			display: none;
 			line-height: 100%;
 			vertical-align: middle;
 			font-weight: bold;
-			color: gray;	
+			color: gray;
 		}
-		
+
 		.tableView
 		{
 			list-style-type: none;
@@ -293,7 +297,7 @@
 			padding-top: 44px;
 			overflow: hidden;
 		}
-		
+
 		.tableViewSectionHeaderView {
 			text-align: left;
 			padding: 5px 5px 7px 15px;
@@ -317,7 +321,7 @@
 			background-color: rgba(255, 255, 255 ,1.0);
 			box-shadow: inset 15px 0 #fff, inset -1px 0 #fff, inset 0 -1px 0 0 #c8c7cc; /* Fake partial borders courtesy of http://landonschropp.com/blog/partial-borders-in-css/ */
 		}
-		
+
 		#columnsWrapper .column .tableView .row a
 		{
 			display: block;
@@ -325,20 +329,20 @@
 			width: 100%;
 			height: 43px;
 			white-space: nowrap;
-			overflow: hidden;		
+			overflow: hidden;
 			text-decoration: none;
-			font-family: "HelveticaNeue", "Helvetica", sans-serif;	
+			font-family: "HelveticaNeue", "Helvetica", sans-serif;
 			color: #000;
 		}
 
 		#columnsWrapper .column .tableView .row a:hover {
-			background-color: #f0f0f0;	
+			background-color: #f0f0f0;
 		}
 
 		#columnsWrapper .column .tableView .row a:active {
 			background-color: #d9d9d9;
 		}
-		
+
 		#columnsWrapper .column .tableView .row a .label
 		{
 			margin-left: 15px;
@@ -348,9 +352,9 @@
 			display: block;
 			float: left;
 			text-overflow: ellipsis;
-		}		
+		}
 
-		/** 
+		/**
 		 *	If the cell has an image in it, use a narrower label.
 		 */
 
@@ -359,7 +363,7 @@
 			width: 240px;
 			margin-left: 5px;
 		}
-		
+
 		#columnsWrapper .column .tableView .row a img
 		{
 			height: 34px;
@@ -370,9 +374,9 @@
 			border-radius: 9px;
 			border: 1px solid rgba(0,0,0,0.2);
 		}
-		
+
 		/* The footer */
-		
+
 		#footer
 		{
 			display: block;
@@ -382,13 +386,13 @@
 			width: 100%;
 			margin-bottom: 0;
 			border-bottom-left-radius: 3px;
-			border-bottom-right-radius: 3px;			
+			border-bottom-right-radius: 3px;
 			text-align: center;
 			border-top: 1px solid #000;
 			position: fixed;
 			bottom: 0;
 		}
-		
+
 		#footer #photo
 		{
 			display: block;
@@ -399,14 +403,30 @@
 			overflow: hidden;
 			border-radius: 3px;
 		}
-		
+
 		#footer p
 		{
 			margin: 0;
 			font-weight:100;
 			font-size: 14px;
 		}
-		
+
+		#footer .twitterLink
+		{
+			margin: 0 0 0 5px;
+			font-weight: 100;
+			font-size: 14px;
+			text-decoration: none;
+			float: left;
+		}
+
+
+		.twitterLink
+		{
+		    float: right;
+		    margin-right: 5px;
+		}
+
 		/* Tab Bars */
 
 		.tabbar
@@ -414,7 +434,7 @@
 			height: 49px;
 			color: #fff;
 			font-family: Helvetica, sans;
-			background: rgba(255, 255, 255, 0.8);
+			background: rgba(255, 255, 255, 0.98);
 			color: #000;
 		}
 
