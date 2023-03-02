@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+  display: flex;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #1A5C71;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 15%;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.App-body {
+  margin-left: 1.5rem;
+}
+
+.App-circle {
+  border-radius: 50%;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: red;
+  overflow: hidden;
+}
+
+.App-circleFullWidth {
+  aspect-ratio: 1;
+}
+
+/** social icons */
+
+.App-socialIconTray {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  gap: 0.5rem 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-socialIcon {
+  height: 4rem;
+  width: 4rem;
+  background: #81ADBB;
+  
+}
+
+/** timeline */
+.App-timelineEntryView h3 {
+color: #1A5C71;
+}
+
+.App-timelineEntryView h3::before {
+  content: "▶";
+  color: #81ADBB;
+  margin-right: 0.5rem;
+}
+
+.App-photo {
+  display: flex;
+  background-color: #fff;
+  align-self: stretch;
+  aspect-ratio: 1;
+  flex-grow: 2;
+}
